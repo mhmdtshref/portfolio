@@ -1,0 +1,26 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Create your own portfolio - server side.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhmdtshref/portfolio.git"
+  },
+  "keywords": [
+    "portfolio",
+    "profile",
+    "services",
+    "CV",
+    "Resume"
+  ],
+  "author": "Muhammad Shareef",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mhmdtshref/portfolio/issues"
+  },
+  "homepage": "https://github.com/mhmdtshref/portfolio#readme"
+}
