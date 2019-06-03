@@ -1,0 +1,44 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Create your own portfolio - server side.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest ./tests",
+    "start": "node ./src/server.js",
+    "dev:client": "cd client && npm run start",
+    "dev:server": "nodemon ./src/server.js",
+    "eslint": "eslint ./src",
+    "eslint:fix": "eslint --fix ./src",
+    "coverage": "jest --coverage ./tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhmdtshref/portfolio.git"
+  },
+  "keywords": [
+    "portfolio",
+    "profile",
+    "services",
+    "CV",
+    "Resume"
+  ],
+  "author": "Muhammad Shareef",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mhmdtshref/portfolio/issues"
+  },
+  "homepage": "https://github.com/mhmdtshref/portfolio#readme",
+  "dependencies": {
+    "env2": "^2.2.2",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "codecov": "^3.5.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.3",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1"
+  }
+}
