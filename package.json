@@ -31,7 +31,8 @@
   "homepage": "https://github.com/mhmdtshref/portfolio#readme",
   "dependencies": {
     "env2": "^2.2.2",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.5.14"
   },
   "devDependencies": {
     "codecov": "^3.5.0",
