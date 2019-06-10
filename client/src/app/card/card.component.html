@@ -1,3 +1,5 @@
-<p>
-  card works!
-</p>
+<div id="card-container" [ngSwitch]="this.type">
+  <div class="card-type-1" *ngSwitchCase="1">
+    <img src="{{this.details.imageUrl}}">
+  </div>
+</div>
