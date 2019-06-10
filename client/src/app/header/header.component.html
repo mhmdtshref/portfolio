@@ -4,4 +4,7 @@
     <h3>{{data.jobTitle}}</h3>
     <p>{{data.description}}</p>
   </div>
+  <div id="socials-container">
+      <app-social *ngFor="let item of socialsList()" [imageUrl]="item.imageUrl" [socialLink]="item.socialLink"></app-social>
+  </div>
 </header>
