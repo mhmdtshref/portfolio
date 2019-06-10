@@ -1,3 +1,6 @@
-<p>
-  section works!
-</p>
+<div id="section">
+  <h2>{{this.title}}</h2>
+  <div id="cards">
+    <app-card *ngFor="let item of getCards()" [type]="item.type" [details]="item.details"></app-card>
+  </div>
+</div>
