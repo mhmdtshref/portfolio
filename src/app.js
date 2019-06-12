@@ -3,7 +3,7 @@ const express = require('express');
 
 const app = express();
 
-const sectionRouter = require('./router/section.router');
+const { sectionRouter } = require('./router/');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
