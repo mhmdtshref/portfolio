@@ -1,7 +1,18 @@
 const { Section } = require('../Models/');
+const Response = require('./Response.js');
 
 const index = (req, res) => {
-    res.json({ success: true, data: { cards: [{ type: 1, details: { imgUrl: 'this is img url' } }] }});
+/*    const { id } = req.params;
+    Section.findById(id)
+        .exec((err, section) => {
+            if(err){
+                Response.error.database(res, err);
+            } else {
+                const { cards } = section;
+                Response.success(res, { cards });
+            }
+        });*/
+    Response.success(res, { cards: ['card-example-1', 'card-example-2'] });
 };
 
 module.exports = { index };
