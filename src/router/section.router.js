@@ -1,9 +1,8 @@
 const express = require('express');
+const { Section } = require('../Controllers/');
 
 const router = express.Router();
 
-router.get('/:id', (req, res) => {
-    res.json({ success: true, data: { cards: [{ type: 1, details: { imgUrl: 'this is img url' } }] }});
-});
+router.get('/:id', Section.index);
 
 module.exports = router;
