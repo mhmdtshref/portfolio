@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose');
 
 const PictureCardSchema = Schema({
   name: String,
-  pictureUrl: String,
+  imageUrl: String,
   defaultColor: String,
   section: { type: Schema.Types.ObjectId, ref: 'Section', required: true },
 });
