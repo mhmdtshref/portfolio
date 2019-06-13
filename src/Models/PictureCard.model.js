@@ -1,10 +1,10 @@
 const { Schema, model } = require('mongoose');
 
 const PictureCardSchema = Schema({
-    name: String,
-    pictureUrl: String,
-    defaultColor: String,
-    section: { type: Schema.Types.ObjectId, ref: 'Section', required: true },
+  name: String,
+  pictureUrl: String,
+  defaultColor: String,
+  section: { type: Schema.Types.ObjectId, ref: 'Section', required: true },
 });
 
 module.exports = model('PictureCard', PictureCardSchema);

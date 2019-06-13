@@ -1,16 +1,16 @@
 const dbError = (res, error) => {
-    res.status(500).json({ success: false, error: error.message });
+  res.status(500).json({ success: false, error: error.message });
 };
 
 const requestError = (res, error) => {
-    res.json({ success: false, error: `Request Error: ${error.message}` });
+  res.json({ success: false, error: `Request Error: ${error.message}` });
 };
 
 const success = (res, data) => {
-    res.json({ success: true, data });
+  res.json({ success: true, data });
 };
 
 module.exports = {
-    error: { database: dbError, badRequest: requestError },
-    success,
+  error: { database: dbError, badRequest: requestError },
+  success,
 };

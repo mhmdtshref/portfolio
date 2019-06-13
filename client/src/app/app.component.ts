@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Title } from "@angular/platform-browser";
+import { Title } from '@angular/platform-browser';
 import userData from '../data.json';
 
 @Component({

@@ -72,10 +72,10 @@ export class SectionComponent implements OnInit {
         return [{
           type: 4,
           details: { imageUrl: 'https://res.cloudinary.com/howl1960/image/upload/v1560228692/Technologies_Section_ufoa2x.png' }
-        }]
+        }];
     }
 
-  };
+  }
 
   ngOnInit() {
   }
