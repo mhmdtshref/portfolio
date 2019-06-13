@@ -8,9 +8,9 @@ import userData from '../../data.json';
 })
 export class HeaderComponent implements OnInit {
 
-  data=userData;
+  data = userData;
 
-  socialsList = () =>{
+  socialsList = () => {
     return [{
       imageUrl: 'https://facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png',
       socialLink: 'https://www.facebook.com/mhmdtshref',
@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
         imageUrl: 'http://www.stickpng.com/assets/images/58e9196deb97430e819064f6.png',
         socialLink: 'http://twitter.com/mhmdtshref',
       }];
-  };
+  }
 
   constructor() { }
 
