@@ -1,18 +1,29 @@
-const { Section } = require('../Models/');
+const { Section, LogoCard, TextCard, PictureCard } = require('../Models/');
 const Response = require('./Response.js');
 
-const index = (req, res) => {
-/*    const { id } = req.params;
-    Section.findById(id)
-        .exec((err, section) => {
-            if(err){
-                Response.error.database(res, err);
-            } else {
-                const { cards } = section;
+
+const get = (req, res) => {
+    const { id } = req.params;
+    let c = 0;
+    let cards = [];
+
+    const checkFinish = counter => counter >= 3;
+
+    const submitCards = (error, cardsToAdd, type) => {
+        if(!error){
+            cards = cards.concat(cardsToAdd);
+            if(checkFinish(++c)){
+                cards = cards.map(card => ({ type, details: card }));
                 Response.success(res, { cards });
-            }
-        });*/
-    Response.success(res, { cards: ['card-example-1', 'card-example-2'] });
+            };
+        } else {
+            Response.error.database(res, error);
+        }
+    };
+
+    PictureCard.find({ section: id }).exec((error, cardsToAdd) => submitCards(error, cardsToAdd, 1));
+    TextCard.find({ section: id }).exec((error, cardsToAdd) => submitCards(error, cardsToAdd, 2));
+    LogoCard.find({ section: id }).exec((error, cardsToAdd) => submitCards(error, cardsToAdd, 3));
 };
 
 const store = (req, res) => {
@@ -27,4 +38,4 @@ const store = (req, res) => {
         });
 };
 
-module.exports = { index, store };
+module.exports = { get, store };
