@@ -9,10 +9,11 @@ const get = (req, res) => {
 
     const checkFinish = counter => counter >= 3;
 
-    const submitCards = (error, cardsToAdd) => {
+    const submitCards = (error, cardsToAdd, type) => {
         if(!error){
             cards = cards.concat(cardsToAdd);
             if(checkFinish(++c)){
+                cards = cards.map(card => ({ type, details: card }));
                 Response.success(res, { cards });
             };
         } else {
@@ -20,9 +21,9 @@ const get = (req, res) => {
         }
     };
 
-    LogoCard.find({ section: id }).exec(submitCards);
-    TextCard.find({ section: id }).exec(submitCards);
-    PictureCard.find({ section: id }).exec(submitCards);
+    PictureCard.find({ section: id }).exec((error, cardsToAdd) => submitCards(error, cardsToAdd, 1));
+    TextCard.find({ section: id }).exec((error, cardsToAdd) => submitCards(error, cardsToAdd, 2));
+    LogoCard.find({ section: id }).exec((error, cardsToAdd) => submitCards(error, cardsToAdd, 3));
 };
 
 const store = (req, res) => {
