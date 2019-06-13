@@ -5,6 +5,7 @@ const LogoCardSchema = Schema({
     title: String,
     PictureUrl: String,
     defaultColor: String,
+    section: { type: Schema.Types.ObjectId, ref: 'Section', required: true },
 });
 
 module.exports = model('LogoCard', LogoCardSchema);
