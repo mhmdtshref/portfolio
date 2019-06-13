@@ -15,4 +15,16 @@ const index = (req, res) => {
     Response.success(res, { cards: ['card-example-1', 'card-example-2'] });
 };
 
-module.exports = { index };
+const store = (req, res) => {
+    const { name, title, type, size, defaultColor, defaultPictureUrl } = req.body;
+    const section = new Section({ name, title, type, size, defaultColor, defaultPictureUrl });
+    section.save()
+        .then(() => {
+            Response.success(res);
+        })
+        .catch((err) => {
+            Response.error.database(res, err);
+        });
+};
+
+module.exports = { index, store };
