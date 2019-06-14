@@ -5,7 +5,7 @@ const Response = require('./Response.js');
 
 
 const get = (req, res) => {
-  const { id } = req.params;
+  const { name } = req.params;
   let c = 0;
   let cards = [];
 
@@ -24,9 +24,15 @@ const get = (req, res) => {
     }
   };
 
-  PictureCard.find({ section: id }).exec((error, cardsToAdd) => submitCards(error, cardsToAdd, 1));
-  TextCard.find({ section: id }).exec((error, cardsToAdd) => submitCards(error, cardsToAdd, 2));
-  LogoCard.find({ section: id }).exec((error, cardsToAdd) => submitCards(error, cardsToAdd, 3));
+  Section.findOne({ name }).exec((error, sectionResult) => {
+    if(!error && sectionResult){
+      PictureCard.find({ section: sectionResult.id }).exec((error, cardsToAdd) => submitCards(error, cardsToAdd, 1));
+      TextCard.find({ section: sectionResult.id }).exec((error, cardsToAdd) => submitCards(error, cardsToAdd, 2));
+      LogoCard.find({ section: sectionResult.id }).exec((error, cardsToAdd) => submitCards(error, cardsToAdd, 3));
+    } else {
+      Response.error.badRequest(res, error || new Error('Section Not Found!'));
+    }
+  });
 };
 
 const store = (req, res) => {
