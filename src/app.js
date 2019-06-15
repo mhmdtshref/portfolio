@@ -9,8 +9,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '..', 'client', 'dist', 'client')));
 
-app.use('/section', sectionRouter);
-app.use('/card', cardRouter);
+app.use('/api/section', sectionRouter);
+app.use('/api/card', cardRouter);
 
 app.get('/*', (req, res) => res.sendfile(path.join(__dirname, '..')));
 

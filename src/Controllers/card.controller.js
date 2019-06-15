@@ -3,25 +3,25 @@ const { PictureCard, TextCard, LogoCard } = require('../Models/');
 
 const store = (req, res) => {
   const {
-    type, sectionId, name, pictureUrl, defaultColor, title, logoUrl, description,
+    type, sectionId, name, imageUrl, defaultColor, title, iconUrl, description,
   } = req.body;
   let card = null;
 
   switch (type) {
     case '1':
       card = new PictureCard({
-        name, pictureUrl, defaultColor, section: sectionId,
+        name, imageUrl, defaultColor, section: sectionId,
       });
       break;
 
     case '2':
       card = new TextCard({
-        name, title, logoUrl, description, defaultColor, section: sectionId,
+        name, title, iconUrl, description, defaultColor, section: sectionId,
       });
       break;
     case '3':
       card = new LogoCard({
-        name, title, pictureUrl, defaultColor, section: sectionId,
+        name, title, imageUrl, defaultColor, section: sectionId,
       });
       break;
     default:
