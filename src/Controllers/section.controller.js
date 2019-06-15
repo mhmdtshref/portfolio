@@ -8,11 +8,13 @@ const get = (req, res) => {
   const { name } = req.params;
   let c = 0;
   let cards = [];
+  let type = null;
 
   const checkFinish = counter => counter >= 3;
 
-  const submitCards = (error, cardsToAdd, type) => {
+  const submitCards = (error, cardsToAdd, cardsType) => {
     if (!error) {
+      type = cardsToAdd.length > 0 ? cardsType : type;
       cards = cards.concat(cardsToAdd);
       c += 1;
       if (checkFinish(c)) {
@@ -24,7 +26,9 @@ const get = (req, res) => {
     }
   };
 
-  Section.findOne({ name }).exec((error, sectionResult) => {
+  console.log("NAME: ", name, "IN LOWER: ", name.toLowerCase());
+
+  Section.findOne({ name: name.toLowerCase() }).exec((error, sectionResult) => {
     if(!error && sectionResult){
       PictureCard.find({ section: sectionResult.id }).exec((error, cardsToAdd) => submitCards(error, cardsToAdd, 1));
       TextCard.find({ section: sectionResult.id }).exec((error, cardsToAdd) => submitCards(error, cardsToAdd, 2));
