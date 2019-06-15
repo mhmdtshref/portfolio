@@ -26,15 +26,22 @@ const get = (req, res) => {
     }
   };
 
-  console.log("NAME: ", name, "IN LOWER: ", name.toLowerCase());
+  Section.findOne({ name: name.toLowerCase() }).exec((sectionError, sectionResult) => {
+    if (!sectionError && sectionResult) {
+      PictureCard.find({ section: sectionResult.id })
+        .exec((error, cardsToAdd) => submitCards(error, cardsToAdd, 1, sectionResult));
 
-  Section.findOne({ name: name.toLowerCase() }).exec((error, sectionResult) => {
-    if(!error && sectionResult){
-      PictureCard.find({ section: sectionResult.id }).exec((error, cardsToAdd) => submitCards(error, cardsToAdd, 1, sectionResult));
-      TextCard.find({ section: sectionResult.id }).exec((error, cardsToAdd) => submitCards(error, cardsToAdd, 2, sectionResult));
-      LogoCard.find({ section: sectionResult.id }).exec((error, cardsToAdd) => submitCards(error, cardsToAdd, 3, sectionResult));
+      TextCard.find({ section: sectionResult.id })
+        .exec((error, cardsToAdd) => {
+          submitCards(error, cardsToAdd, 2, sectionResult);
+        });
+
+      LogoCard.find({ section: sectionResult.id })
+        .exec((error, cardsToAdd) => {
+          submitCards(error, cardsToAdd, 3, sectionResult);
+        });
     } else {
-      Response.error.badRequest(res, error || new Error('Section Not Found!'));
+      Response.error.badRequest(res, sectionError || new Error('Section Not Found!'));
     }
   });
 };
