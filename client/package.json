@@ -3,14 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --proxy-config proxy.config.json",
     "build": "ng build",
     "test": "ng test",
     "tslint": "ng lint",
     "tslint:fix": "ng lint --fix=true",
     "e2e": "ng e2e"
   },
-  "proxy": "http://localhost:5000",
   "private": true,
   "dependencies": {
     "@angular/animations": "~8.0.0",
