@@ -12,14 +12,14 @@ const get = (req, res) => {
 
   const checkFinish = counter => counter >= 3;
 
-  const submitCards = (error, cardsToAdd, cardsType) => {
+  const submitCards = (error, cardsToAdd, cardsType, section) => {
     if (!error) {
       type = cardsToAdd.length > 0 ? cardsType : type;
       cards = cards.concat(cardsToAdd);
       c += 1;
       if (checkFinish(c)) {
         cards = cards.map(card => ({ type, details: card }));
-        Response.success(res, { cards });
+        Response.success(res, { section, cards });
       }
     } else {
       Response.error.database(res, error);
@@ -30,9 +30,9 @@ const get = (req, res) => {
 
   Section.findOne({ name: name.toLowerCase() }).exec((error, sectionResult) => {
     if(!error && sectionResult){
-      PictureCard.find({ section: sectionResult.id }).exec((error, cardsToAdd) => submitCards(error, cardsToAdd, 1));
-      TextCard.find({ section: sectionResult.id }).exec((error, cardsToAdd) => submitCards(error, cardsToAdd, 2));
-      LogoCard.find({ section: sectionResult.id }).exec((error, cardsToAdd) => submitCards(error, cardsToAdd, 3));
+      PictureCard.find({ section: sectionResult.id }).exec((error, cardsToAdd) => submitCards(error, cardsToAdd, 1, sectionResult));
+      TextCard.find({ section: sectionResult.id }).exec((error, cardsToAdd) => submitCards(error, cardsToAdd, 2, sectionResult));
+      LogoCard.find({ section: sectionResult.id }).exec((error, cardsToAdd) => submitCards(error, cardsToAdd, 3, sectionResult));
     } else {
       Response.error.badRequest(res, error || new Error('Section Not Found!'));
     }
