@@ -88,3 +88,6 @@ config.env
 
 # DynamoDB Local files
 .dynamodb/
+
+# System folders
+.DS_Store
