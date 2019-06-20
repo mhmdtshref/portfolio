@@ -2,15 +2,19 @@
 
 #card-container{
   .card-type-1{
+    border: 3px solid @secondary-font-color;
     width: 100%;
+    line-height: 0;
     img{
       width: 100%;
+      border: 6px solid @primary-background-color;
+      box-sizing: border-box;
     }
   }
 
   .card-type-2{
     width: 100%;
-    background-color: #b4b5bc;
+    background-color: #d7d8e0;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -49,6 +53,8 @@
       }
       h4{
         text-align: center;
+        color: @secondary-font-color;
+        margin-top: 10%;
       }
     }
   }
