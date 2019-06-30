@@ -6,11 +6,13 @@ header{
   background-position-y: 60%;
   height: 45vh;
   padding-bottom: 5%;
+  display: flex;
+  flex-wrap: wrap;
 
-  #right-side {
-    padding: 4%;
+  #left-side {
+    padding-left: 4%;
+    padding-top: 4%;
     width: 40%;
-
     h1 {
       color: @primary-font-color;
       font-family: @titles-font;
@@ -37,6 +39,12 @@ header{
   #socials-container{
     display: flex;
     justify-content: space-around;
-    margin: auto 40% auto 40%;
+    align-items: center;
+    width: 50%;
+
+    app-social {
+      width: 10%;
+    }
+
   }
 }
