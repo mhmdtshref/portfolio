@@ -29,7 +29,7 @@ const get = (req, res) => {
   Section.findOne({ name: name.toLowerCase() }).exec((sectionError, sectionResult) => {
     if (!sectionError && sectionResult) {
       PictureCard.find({ section: sectionResult.id })
-        .exec((error, cardsToAdd) => submitCards(error, cardsToAdd, 1, sectionResult));
+        .exec((error, cardsToAdd) => submitCards(error, cardsToAdd, sectionResult.type, sectionResult));
 
       TextCard.find({ section: sectionResult.id })
         .exec((error, cardsToAdd) => {

@@ -9,6 +9,7 @@ const store = (req, res) => {
 
   switch (type) {
     case '1':
+    case '4':
       card = new PictureCard({
         name, imageUrl, defaultColor, section: sectionId,
       });
