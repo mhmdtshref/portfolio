@@ -3,7 +3,7 @@ const express = require('express');
 
 const app = express();
 
-const { sectionRouter, cardRouter } = require('./router/');
+const { sectionRouter, cardRouter, contactUsRouter } = require('./router/');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -11,6 +11,7 @@ app.use(express.static(path.join(__dirname, '..', 'client', 'dist', 'client')));
 
 app.use('/api/section', sectionRouter);
 app.use('/api/card', cardRouter);
+app.use('/api/contactUs', contactUsRouter);
 
 app.get('/*', (req, res) => res.sendfile(path.join(__dirname, '..')));
 
