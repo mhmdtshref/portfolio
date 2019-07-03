@@ -15,19 +15,21 @@ export class SectionComponent implements OnInit {
   }
 
   getCards = () => {
-    console.log('TITLE: ', this.title);
-    request.get(`/api/section/${this.title}`)
-      .then(({data: response}) => {
-        if (response.success) {
-          this.cards = this.generateSectionCards(response.data.section, response.data.cards);
-          console.log('TITLE: ', this.title, 'CARDS:: ', this.cards);
-        } else {
-          alert(`Response error: ${response.error}`);
-        }
-      })
-      .catch((error) => {
-        alert(`Request Error: ${error.message}`);
-    });
+    if(this.title != 'ContactUs') {
+      console.log('TITLE: ', this.title);
+      request.get(`/api/section/${this.title}`)
+        .then(({data: response}) => {
+          if (response.success) {
+            this.cards = this.generateSectionCards(response.data.section, response.data.cards);
+            console.log('TITLE: ', this.title, 'CARDS:: ', this.cards);
+          } else {
+            alert(`Response error: ${response.error}`);
+          }
+        })
+        .catch((error) => {
+          alert(`Request Error: ${error.message}`);
+        });
+    }
 
   }
 
