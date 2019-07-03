@@ -10,7 +10,8 @@
     "dev:server": "nodemon ./src/server.js",
     "eslint": "eslint ./src",
     "eslint:fix": "eslint --fix ./src",
-    "coverage": "jest --coverage ./tests"
+    "coverage": "jest --coverage ./tests",
+    "heroku-postbuild": "cd client && npm i && npm run build"
   },
   "repository": {
     "type": "git",
