@@ -1,3 +1,10 @@
-<p>
-  contact-us works!
-</p>
+<div id="contact-us">
+  <h2 class="contactUs-header">Contact Us</h2>
+  <form (submit)="this.onSubmitHandler($event)" id="contact-us-form">
+    <input name="name" placeholder="Name" (input)="onChangeHandler($event)" class="input half-input">
+    <input name="email" placeholder="Email" (input)="onChangeHandler($event)" class="input half-input">
+    <input name="subject" placeholder="Subject" (input)="onChangeHandler($event)" class="input full-input">
+    <input name="message"placeholder="Message" (input)="onChangeHandler($event)" class="textArea-input">
+    <button class="send-button">Send</button>
+  </form>
+</div>

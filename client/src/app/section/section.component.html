@@ -1,6 +1,9 @@
-<div id="section">
+<div id="section" *ngIf="title != 'ContactUs'">
   <h2>{{this.title}}</h2>
   <div id="cards">
     <app-card *ngFor="let item of this.cards" [type]="item.type" [details]="item.details"></app-card>
   </div>
+</div>
+<div id="contactUs">
+<app-contact-us *ngIf="title == 'ContactUs'"></app-contact-us>
 </div>
