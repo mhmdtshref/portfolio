@@ -13,6 +13,7 @@ import { SectionComponent } from './section/section.component';
 import { CardComponent } from './card/card.component';
 import { SocialComponent } from './social/social.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [Title],
   bootstrap: [AppComponent]
