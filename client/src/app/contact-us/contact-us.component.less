@@ -6,6 +6,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  font-family: Arial, serif;
 
   .contactUs-header{
     font-family: @titles-font;
@@ -33,30 +34,27 @@
     .input {
       height: 2.5vw;
       margin-bottom: 1%;
-      background-color: #d7d8e0;
-      border: 0px;
+      padding: 12px 20px;
+      box-sizing: border-box;
+      border: 0;
       border-radius: 3px;
-      &::placeholder{
-        font-size: 0.9em;
-        top: 3%;
-        left: 1%;
-        position: relative;
-      }
+      background-color: #d7d8e0;
+      resize: none;
+      font-family: inherit;
     }
 
     .textArea-input {
-      height: 4vw;
-      margin-bottom: 1%;
+      height: 15vw;
       width: 100%;
-      background-color: #d7d8e0;
+      margin-bottom: 1%;
+      padding: 12px 20px;
+      box-sizing: border-box;
       border: 0;
       border-radius: 3px;
-      &::placeholder{
-        font-size: 0.9em;
-        top: -20%;
-        left: 1%;
-        position: relative;
-      }
+      background-color: #d7d8e0;
+      resize: none;
+      font-family: inherit;
+
     }
 
     .send-button {
@@ -86,6 +84,7 @@
 
       .textArea-input {
         height: 15vw;
+
       }
 
       .send-button {
@@ -110,9 +109,6 @@
       .textArea-input {
         height: 20vw;
         width: 100%;
-        &::placeholder{
-          top: -30%;
-        }
       }
 
       .send-button {
