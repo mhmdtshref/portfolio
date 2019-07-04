@@ -16,21 +16,23 @@
 
 #navTitle {
   font-family: @titles-font;
-  font-size: 1vw;
+  font-size: 1em;
   float: left;
-  margin: 0 15%;
+  width: 30%;
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 100%;
+  box-sizing: border-box;
 }
 
 #navList{
   display: flex;
   justify-content: space-around;
   height: 100%;
-  width: 50%;
+  width: 70%;
   float: right;
-  margin: 0 3%;
+  box-sizing: border-box;
 }
 
 .nav-item{
@@ -42,7 +44,7 @@
 
   a {
     text-decoration: none;
-    font-size: 1vw;
+    font-size: 1em;
   }
 
 }
@@ -55,4 +57,48 @@
 .secondary-text-color {
   color: #000000;
   transition: background-color 1500ms;
+}
+
+@media only screen and (max-width: 800px) {
+  #navTitle {
+    font-size: 0.8em;
+    width: 30%;
+  }
+
+  .nav-item{
+    a {
+      font-size: 0.8em;
+    }
+
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #navTitle {
+    font-size: 0.7em;
+    width: 20%;
+  }
+  #navList{
+    width: 80%;
+  }
+
+  .nav-item{
+    a {
+      font-size: 0.7em;
+    }
+
+  }
+}
+
+@media only screen and (max-width: 525px) {
+  #navTitle {
+    font-size: 0.7em;
+  }
+
+  .nav-item{
+    a {
+      font-size: 0.5em;
+    }
+
+  }
 }
