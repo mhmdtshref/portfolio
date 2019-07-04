@@ -14,6 +14,7 @@ import { CardComponent } from './card/card.component';
 import { SocialComponent } from './social/social.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HttpClientModule } from '@angular/common/http';
+import { Ng2LoadingSpinnerModule } from 'ng2-loading-spinner';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    Ng2LoadingSpinnerModule.forRoot({}),
   ],
   providers: [Title],
   bootstrap: [AppComponent]

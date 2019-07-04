@@ -16,12 +16,15 @@ export class ContactUsComponent implements OnInit {
     subject: '',
     message: '',
   };
+  showSpinner = false;
+  buttonText = 'Send';
 
   constructor(private http: HttpClient) {
   }
 
   onSubmitHandler(e) {
     e.preventDefault();
+    this.showSpinner = true;
     const headers = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' });
 
     const params = new HttpParams()
@@ -33,7 +36,14 @@ export class ContactUsComponent implements OnInit {
     this.http.post('/api/contactUs', params.toString(), { headers })
       .subscribe((res: any) => {
         if (res.success) {
-          alert('Your message has been submitted successfully!');
+          this.showSpinner = false;
+          this.buttonText = null;
+          const icon = document.querySelector('button i');
+          icon.classList.remove('invisible');
+          setTimeout(() => {
+            icon.classList.add('invisible');
+            this.buttonText = 'Send';
+          }, 3000);
         } else {
           alert(`Submit error: ${res.error}`);
         }
