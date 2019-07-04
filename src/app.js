@@ -3,7 +3,9 @@ const express = require('express');
 
 const app = express();
 
-const { sectionRouter, cardRouter, contactUsRouter, socialRouter } = require('./router/');
+const {
+  sectionRouter, cardRouter, contactUsRouter, socialRouter,
+} = require('./router/');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

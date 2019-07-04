@@ -10,10 +10,12 @@ header{
   flex-wrap: wrap;
   min-height: 91vh;
 
-  #left-side {
+  #description-container {
+    box-sizing: border-box;
     padding-left: 4%;
-    padding-top: 4%;
-    width: 40%;
+    padding-top: 12vh;
+    width: 100%;
+    height: 60%;
     h1 {
       color: @primary-font-color;
       font-family: @titles-font;
@@ -34,18 +36,99 @@ header{
 
     p {
       font-size: 1vw;
-      margin-top: 10%;
+      margin-top: 2%;
+      width: 36%;
     }
   }
+
+
   #socials-container{
+    box-sizing: border-box;
     display: flex;
     justify-content: space-around;
-    align-items: center;
-    width: 50%;
+    align-items: start;
+    height: 40%;
+    width: 100%;
+    padding-right: 25%;
+    padding-left: 25%;
 
     app-social {
       width: 10%;
     }
 
   }
+}
+
+
+@media only screen and (max-width: 1400px) {
+  header {
+    #description-container {
+      h1 {
+        font-size: 3.5vw;
+      }
+
+      h3 {
+        font-size: 2vw;
+      }
+
+      p {
+        font-size: 1.5vw;
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  header {
+    min-height: 40vh;
+    #description-container {
+      height: 75%;
+
+      h1 {
+        font-size: 2em;
+      }
+
+      h3 {
+        font-size: 1.5em;
+      }
+
+      p {
+        font-size: 1.2em;
+        width: 50%;
+      }
+    }
+    #socials-container {
+      align-items: center;
+      height: 25%;
+      padding-right: 15%;
+      padding-left: 15%;
+    }
+  }
+
+}
+
+@media only screen and (max-width: 850px) {
+  header {
+    #description-container {
+      h1 {
+        font-size: 1.7em;
+      }
+
+      h3 {
+        font-size: 1.2em;
+      }
+      p {
+        font-size: 0.8em;
+        width: 80%;
+      }
+    }
+
+    #socials-container {
+      padding-right: 10%;
+      padding-left: 10%;
+    }
+
+  }
+
 }
