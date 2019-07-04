@@ -2,7 +2,7 @@
 
 #nav{
   height: 6vh;
-  border-bottom: 0.1px solid #313038;
+  border-bottom: 0.1px solid #000000;
 }
 
 .primary-bg{
@@ -34,8 +34,9 @@
   width: 70%;
   float: right;
   box-sizing: border-box;
-}
+  visibility: visible;
 
+}
 .nav-item{
   font-family: @titles-font;
   list-style-type: none;
@@ -49,6 +50,13 @@
   }
 
 }
+
+#navDropdown {
+  visibility: hidden;
+}
+
+
+
 
 .primary-text-color {
   color: @primary-font-color;
@@ -76,34 +84,74 @@
 
 @media only screen and (max-width: 600px) {
   #navTitle {
-    font-size: 0.7em;
-    width: 20%;
+    font-size: 1em;
+    width: 50%;
   }
   #navList{
-    width: 80%;
+    visibility: hidden;
+    display: none;
   }
 
-  .nav-item{
-    a {
-      font-size: 0.7em;
+  #navDropdown {
+    visibility: visible;
+    float: right;
+    height: 98.5%;
+    width: 12%;
+
+    position: relative;
+    display: inline-block;
+
+    a:hover {
+      background-color: #ddd;
     }
 
+    button {
+      background-color: @primary-background-color;
+      color: white;
+      height: 100%;
+      width: 100%;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      &:hover, &:focus {
+        background-color: #2980B9;
+      }
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      overflow: auto;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      right: 0;
+
+      a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+    }
+
+    .show {
+      display: block;
+    }
   }
+
+
 }
 
-@media only screen and (max-width: 525px) {
-  #nav{
-    height: 4vh;
+@media only screen and (max-width: 500px) {
+  #navDropdown {
+    visibility: visible;
+    float: right;
+    height: 98.5%;
+    width: 20%;
   }
 
-  #navTitle {
-    font-size: 0.7em;
-  }
 
-  .nav-item{
-    a {
-      font-size: 0.5em;
-    }
 
-  }
 }
