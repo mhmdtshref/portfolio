@@ -11,10 +11,11 @@ header{
   min-height: 91vh;
 
   #left-side {
+    box-sizing: border-box;
     padding-left: 4%;
     padding-top: 12vh;
     width: 100%;
-    height: 50%;
+    height: 60%;
     h1 {
       color: @primary-font-color;
       font-family: @titles-font;
@@ -42,10 +43,11 @@ header{
 
 
   #socials-container{
+    box-sizing: border-box;
     display: flex;
     justify-content: space-around;
-    align-items: first;
-    height: 50%;
+    align-items: start;
+    height: 40%;
     width: 100%;
     padding-right: 25%;
     padding-left: 25%;
@@ -55,4 +57,78 @@ header{
     }
 
   }
+}
+
+
+@media only screen and (max-width: 1400px) {
+  header {
+    #left-side {
+      h1 {
+        font-size: 3.5vw;
+      }
+
+      h3 {
+        font-size: 2vw;
+      }
+
+      p {
+        font-size: 1.5vw;
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  header {
+    min-height: 40vh;
+    #left-side {
+      height: 75%;
+
+      h1 {
+        font-size: 2em;
+      }
+
+      h3 {
+        font-size: 1.5em;
+      }
+
+      p {
+        font-size: 1.2em;
+        width: 50%;
+      }
+    }
+    #socials-container {
+      align-items: center;
+      height: 25%;
+      padding-right: 15%;
+      padding-left: 15%;
+    }
+  }
+
+}
+
+@media only screen and (max-width: 850px) {
+  header {
+    #left-side {
+      h1 {
+        font-size: 1.7em;
+      }
+
+      h3 {
+        font-size: 1.2em;
+      }
+      p {
+        font-size: 0.8em;
+        width: 80%;
+      }
+    }
+
+    #socials-container {
+      padding-right: 10%;
+      padding-left: 10%;
+    }
+
+  }
+
 }
