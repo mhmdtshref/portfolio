@@ -6,68 +6,123 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+
+  .contactUs-header{
+    font-family: @titles-font;
+    color: @primary-font-color;
+    font-size: @title-font-size;
+    margin-bottom: 2%;
+    width: 100%;
+    text-align: center;
+  }
+
+  form {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .half-input {
+      width: 49%;
+    }
+
+    .full-input {
+      width: 100%;
+    }
+
+    .input {
+      height: 2.5vw;
+      margin-bottom: 1%;
+      background-color: #d7d8e0;
+      border: 0px;
+      border-radius: 3px;
+      &::placeholder{
+        font-size: 0.9em;
+        top: 3%;
+        left: 1%;
+        position: relative;
+      }
+    }
+
+    .textArea-input {
+      height: 4vw;
+      margin-bottom: 1%;
+      width: 100%;
+      background-color: #d7d8e0;
+      border: 0;
+      border-radius: 3px;
+      &::placeholder{
+        font-size: 0.9em;
+        top: -20%;
+        left: 1%;
+        position: relative;
+      }
+    }
+
+    .send-button {
+      width: 16%;
+      background-color: #2088c8;
+      color: @primary-font-color;
+      border-radius: 3px;
+      border: 0;
+      height: 2vw;
+      margin-left: 42%;
+      margin-right: 42%;
+    }
+
+  }
+
+
 }
 
-#contact-us-form {
-  width: 70%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
 
-.half-input {
-  width: 49%;
-}
+@media only screen and (max-width: 1000px) {
+  #contact-us {
+    form {
+      width: 96%;
+      .input {
+        height: 4vw;
+      }
 
-.full-input {
-  width: 100%;
-}
+      .textArea-input {
+        height: 15vw;
+      }
 
-.input {
-  height: 2.5vw;
-  margin-bottom: 1%;
-  background-color: #d7d8e0;
-  border: 0px;
-  border-radius: 3px;
-  &::placeholder{
-    font-size: 200%;
-    top: 3%;
-    left: 1%;
-    position: relative;
+      .send-button {
+        height: 4vw;
+      }
+
+
+    }
   }
 }
 
-.textArea-input {
-  height: 4vw;
-  margin-bottom: 1%;
-  width: 100%;
-  background-color: #d7d8e0;
-  border: 0;
-  border-radius: 3px;
-  &::placeholder{
-    font-size: 200%;
-    top: -20%;
-    left: 1%;
-    position: relative;
+@media only screen and (max-width: 600px) {
+  #contact-us {
+    form {
+      width: 96%;
+      .input {
+        height: 7vw;
+        width: 100%;
+        margin-bottom: 2%;
+      }
+
+      .textArea-input {
+        height: 20vw;
+        width: 100%;
+        &::placeholder{
+          top: -30%;
+        }
+      }
+
+      .send-button {
+        height: 7vw;
+        width: 26%;
+        margin-left: 37%;
+        margin-right: 37%;
+      }
+
+
+    }
   }
-}
-
-.contactUs-header{
-  font-family: @titles-font;
-  color: @primary-font-color;
-  font-size: @title-font-size;
-  margin-bottom: 2%;
-  width: 100%;
-  text-align: center;
-}
-
-.send-button {
-  width: 16%;
-  background-color: #2088c8;
-  color: @primary-font-color;
-  border-radius: 3px;
-  border: 0;
-  height: 2vw;
-  margin-left: 42%;
-  margin-right: 42%;
 }
