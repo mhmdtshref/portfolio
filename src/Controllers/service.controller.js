@@ -17,10 +17,12 @@ const index = (req, res) => {
 const get = (req, res) => {
   const { id } = req.params;
   Service.findById(id)
-    .exec((service) => {
-      Response.success(res, service);
-    }).catch((error) => {
-      Response.error.database(res, error);
+    .exec((error, service) => {
+      if (error) {
+        Response.error.database(res, error);
+      } else {
+        Response.success(res, service);
+      }
     });
 };
 
@@ -35,7 +37,7 @@ const store = (req, res) => {
   });
   const service = new Service(serviceInfo);
   service.save()
-    .exec(() => {
+    .then(() => {
       Response.success(res);
     })
     .catch((error) => {
