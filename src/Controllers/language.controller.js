@@ -1,14 +1,14 @@
-const { Service } = require('../Models/');
+const { Language } = require('../Models/');
 const Response = require('./Response.js');
 
 
 const index = (req, res) => {
-  Service.find({})
-    .exec((error, services) => {
+  Language.find({})
+    .exec((error, languages) => {
       if (error) {
         Response.error.database(res, error);
       } else {
-        Response.success(res, services);
+        Response.success(res, languages);
       }
     });
 };
@@ -16,27 +16,27 @@ const index = (req, res) => {
 
 const get = (req, res) => {
   const { id } = req.params;
-  Service.findById(id)
-    .exec((error, service) => {
+  Language.findById(id)
+    .exec((error, language) => {
       if (error) {
         Response.error.database(res, error);
       } else {
-        Response.success(res, service);
+        Response.success(res, language);
       }
     });
 };
 
 
 const store = (req, res) => {
-  const serviceInfo = {};
+  const languageInfo = {};
   const {
-    name, imageUrl, brief, description,
+    name, imageUrl, link, description,
   } = req.body;
-  Object.assign(serviceInfo, {
-    name, imageUrl, brief, description,
+  Object.assign(languageInfo, {
+    name, imageUrl, link, description,
   });
-  const service = new Service(serviceInfo);
-  service.save()
+  const language = new Language(languageInfo);
+  language.save()
     .then(() => {
       Response.success(res);
     })

@@ -17,10 +17,12 @@ const index = (req, res) => {
 const get = (req, res) => {
   const { id } = req.params;
   Project.findById(id)
-    .exec((project) => {
-      Response.success(res, project);
-    }).catch((error) => {
-      Response.error.database(res, error);
+    .exec((error, project) => {
+      if (error) {
+        Response.error.database(res, error);
+      } else {
+        Response.success(res, project);
+      }
     });
 };
 
@@ -35,7 +37,7 @@ const store = (req, res) => {
   });
   const project = new Project(projectInfo);
   project.save()
-    .exec(() => {
+    .then(() => {
       Response.success(res);
     })
     .catch((error) => {

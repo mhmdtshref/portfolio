@@ -17,10 +17,12 @@ const index = (req, res) => {
 const get = (req, res) => {
   const { id } = req.params;
   Technology.findById(id)
-    .exec((technology) => {
-      Response.success(res, technology);
-    }).catch((error) => {
-      Response.error.database(res, error);
+    .exec((error, technology) => {
+      if (error) {
+        Response.error.database(res, error);
+      } else {
+        Response.success(res, technology);
+      }
     });
 };
 
@@ -35,7 +37,7 @@ const store = (req, res) => {
   });
   const technology = new Technology(technologyInfo);
   technology.save()
-    .exec(() => {
+    .then(() => {
       Response.success(res);
     })
     .catch((error) => {
