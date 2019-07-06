@@ -5,5 +5,15 @@ const socialRouter = require('./social.router');
 const projectRouter = require('./project.router');
 const serviceRouter = require('./service.router');
 const technologyRouter = require('./technology.router');
+const languageRouter = require('./language.router');
 
-module.exports = { sectionRouter, cardRouter, contactUsRouter, socialRouter, projectRouter, serviceRouter, technologyRouter };
+module.exports = {
+  sectionRouter,
+  cardRouter,
+  contactUsRouter,
+  socialRouter,
+  projectRouter,
+  serviceRouter,
+  technologyRouter,
+  languageRouter,
+};
