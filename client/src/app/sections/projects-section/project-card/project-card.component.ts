@@ -1,0 +1,18 @@
+import {Component, Input, OnInit} from '@angular/core';
+
+@Component({
+  selector: 'app-project-card',
+  templateUrl: './project-card.component.html',
+  styleUrls: ['./project-card.component.less']
+})
+export class ProjectCardComponent implements OnInit {
+
+  @Input() imageUrl: string;
+  @Input() name: string;
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
