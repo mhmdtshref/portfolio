@@ -1,5 +1,12 @@
 {
   "name": "Muhammad Shareef",
   "jobTitle": "Full-Stack Developer",
-  "description": "I’m a Web Developer with extensive experience for over 2 years. I can create websites, web apps and desktop apps."
+  "description": "I’m a Web Developer with extensive experience for over 2 years. I can create websites, web apps and desktop apps.",
+  "address": "Khalil, Palestine",
+  "phone": "+97 056 902 9090",
+  "email": "mhmdtshref@gmail.com",
+  "inspiration": {
+    "text": "There are no limits to what you can accomplish, except the limits you place on your own thinking",
+    "by": "Brian Tracy"
+  }
 }

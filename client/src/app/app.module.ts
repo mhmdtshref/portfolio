@@ -21,6 +21,7 @@ import { ProjectsSectionComponent } from './sections/projects-section/projects-s
 import { ServicesSectionComponent } from './sections/services-section/services-section.component';
 import { LanguagesSectionComponent } from './sections/languages-section/languages-section.component';
 import { TechnologiesSectionComponent } from './sections/technologies-section/technologies-section.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { TechnologiesSectionComponent } from './sections/technologies-section/te
     ProjectsSectionComponent,
     ServicesSectionComponent,
     LanguagesSectionComponent,
-    TechnologiesSectionComponent
+    TechnologiesSectionComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
