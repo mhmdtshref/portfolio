@@ -9,8 +9,6 @@ import { LanguagesComponent } from './pages/languages/languages.component';
 import { TechnologiesComponent } from './pages/technologies/technologies.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
-import { SectionComponent } from './section/section.component';
-import { CardComponent } from './card/card.component';
 import { SocialComponent } from './social/social.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -33,8 +31,6 @@ import { TechnologiesSectionComponent } from './sections/technologies-section/te
     TechnologiesComponent,
     NavbarComponent,
     HeaderComponent,
-    SectionComponent,
-    CardComponent,
     SocialComponent,
     ContactUsComponent,
     ProjectCardComponent,
