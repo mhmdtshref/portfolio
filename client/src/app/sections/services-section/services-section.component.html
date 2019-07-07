@@ -1,0 +1,6 @@
+<div id="section">
+    <h2>Services</h2>
+    <div id="cards">
+        <app-service-card *ngFor="let card of cards" [imageUrl]="card.imageUrl" [name]="card.name" [brief]="card.brief"></app-service-card>
+    </div>
+</div>
