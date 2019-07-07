@@ -15,6 +15,14 @@ import { SocialComponent } from './social/social.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HttpClientModule } from '@angular/common/http';
 import { Ng2LoadingSpinnerModule } from 'ng2-loading-spinner';
+import { ProjectCardComponent } from './sections/projects-section/project-card/project-card.component';
+import { ServiceCardComponent } from './sections/services-section/service-card/service-card.component';
+import { LanguageCardComponent } from './sections/languages-section/language-card/language-card.component';
+import { TechnologyCardComponent } from './sections/technologies-section/technology-card/technology-card.component';
+import { ProjectsSectionComponent } from './sections/projects-section/projects-section.component';
+import { ServicesSectionComponent } from './sections/services-section/services-section.component';
+import { LanguagesSectionComponent } from './sections/languages-section/languages-section.component';
+import { TechnologiesSectionComponent } from './sections/technologies-section/technologies-section.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +36,15 @@ import { Ng2LoadingSpinnerModule } from 'ng2-loading-spinner';
     SectionComponent,
     CardComponent,
     SocialComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    ProjectCardComponent,
+    ServiceCardComponent,
+    LanguageCardComponent,
+    TechnologyCardComponent,
+    ProjectsSectionComponent,
+    ServicesSectionComponent,
+    LanguagesSectionComponent,
+    TechnologiesSectionComponent
   ],
   imports: [
     BrowserModule,
