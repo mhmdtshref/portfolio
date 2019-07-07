@@ -1,0 +1,52 @@
+@import "../../../global-variables";
+
+#section{
+  padding-top: 5%;
+  padding-bottom: 10%;
+  background-color:inherit;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+
+  h2{
+    font-family: @titles-font;
+    color: @primary-font-color;
+    font-size: @title-font-size;
+    margin-bottom: 2%;
+  }
+
+  #cards{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    app-language-card {
+      width: 25%;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 650px) {
+  #section{
+    #cards{
+      justify-content: center;
+      app-language-card {
+        width: 70%;
+        margin-bottom: 5%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #section{
+    #cards{
+      app-language-card {
+        width: 95%;
+      }
+    }
+  }
+}
