@@ -8,6 +8,7 @@
   font-family: Arial, sans-serif;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   #left-side {
     width: 50%;
@@ -64,3 +65,33 @@
   }
 
 }
+
+@media only screen and (max-width: 750px) {
+  #footer {
+    min-height: 60vh;
+    #left-side{
+      width: 100%;
+    }
+
+    #right-side{
+      width: 100%;
+      #inspiration{
+        width: 85%;
+        h2{
+          text-align: center;
+          width: 100%;
+        }
+        p{
+          text-align: center;
+          width: 100%;
+        }
+        h3{
+          padding-top: 8%;
+        }
+      }
+    }
+
+  }
+
+}
+
