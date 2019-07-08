@@ -24,6 +24,8 @@ export class ContactUsComponent implements OnInit {
 
   onSubmitHandler(e) {
     e.preventDefault();
+    const spinner = document.getElementById('spinner');
+    spinner.classList.remove('invisible');
     this.showSpinner = true;
     const headers = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' });
 
@@ -42,6 +44,7 @@ export class ContactUsComponent implements OnInit {
           icon.classList.remove('invisible');
           setTimeout(() => {
             icon.classList.add('invisible');
+            spinner.classList.add('invisible');
             this.buttonText = 'Send';
           }, 3000);
         } else {
