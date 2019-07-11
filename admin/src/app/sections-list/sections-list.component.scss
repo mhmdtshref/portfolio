@@ -1,0 +1,44 @@
+@import "../../global-variables";
+
+#sections-list {
+
+  background-color: $secondary-background-color;
+  min-height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
+
+  #arrow-container{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    .arrow-down {
+      width: 0;
+      height: 0;
+      border-left: 2vw solid transparent;
+      border-right: 2vw solid transparent;
+
+      border-top: 2vw solid #E77E23;
+    }
+  }
+
+  #list-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #sections-container {
+      width: 80%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      .section-container {
+        width: 40%;
+        box-sizing: border-box;
+      }
+    }
+  }
+
+}
