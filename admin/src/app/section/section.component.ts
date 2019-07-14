@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-section',
@@ -11,7 +12,12 @@ export class SectionComponent implements OnInit {
     @Input() description: string;
     @Input() logoUrl: string;
 
-  constructor() { }
+    constructor(private router: Router) { }
+
+    RouteOnClick = () => {
+        this.router.navigate([this.title.toLowerCase()]);
+    }
+
 
   ngOnInit() {
   }
