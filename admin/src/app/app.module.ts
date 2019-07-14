@@ -9,6 +9,7 @@ import { SectionsListComponent } from './sections-list/sections-list.component';
 import { SectionComponent } from './section/section.component';
 import { MainComponent } from './pages/main/main.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
+import { ProjectComponent } from './usable/project/project.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ProjectsComponent } from './pages/projects/projects.component';
     SectionComponent,
     MainComponent,
     ProjectsComponent,
+    ProjectComponent,
   ],
   imports: [
     BrowserModule,
