@@ -1,4 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import { ListsService } from '../lists.service';
 
 @Component({
   selector: 'app-projects',
@@ -7,33 +8,22 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
-    projects = [
-        {
-            imageUrl: 'https://res.cloudinary.com/howl1960/image/upload/v1561877296/npm-package_vlybe1.jpg',
-            name: 'npm package', id: '5d20b4845117fb6e48e59576'
-        },
-        {
-            imageUrl: 'https://res.cloudinary.com/howl1960/image/upload/v1561877296/npm-package_vlybe1.jpg',
-            name: 'npm package',
-            id: '5d20b4845117fb6e48e59576'
-        },
-        {
-            imageUrl: 'https://res.cloudinary.com/howl1960/image/upload/v1561877296/npm-package_vlybe1.jpg',
-            name: 'npm package', id: '5d20b4845117fb6e48e59576'
-        },
-        {
-            imageUrl: 'https://res.cloudinary.com/howl1960/image/upload/v1561877296/npm-package_vlybe1.jpg',
-            name: 'npm package', id: '5d20b4845117fb6e48e59576'
-        },
-        {
-            imageUrl: 'https://res.cloudinary.com/howl1960/image/upload/v1561877296/npm-package_vlybe1.jpg',
-            name: 'npm package', id: '5d20b4845117fb6e48e59576'
-        },
-    ];
+    projects = [];
 
-  constructor() { }
+    constructor(private listsService: ListsService) { }
 
-  ngOnInit() {
-  }
+    getProjectsList = () => {
+        this.listsService.getProjectsList()
+            .then((projects: any) => {
+                this.projects = projects;
+            })
+            .catch((error) => {
+                alert(`Request Error: ${error.message}`);
+            });
+    }
+
+    ngOnInit() {
+        this.getProjectsList();
+    }
 
 }
