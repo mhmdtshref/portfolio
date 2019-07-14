@@ -1,0 +1,24 @@
+@import "../../../global-variables";
+
+#page-container{
+  padding: 5% 10%;
+  min-height: 100vh;
+  background-color: $secondary-background-color;
+  #page-title {
+    font-family: $primary-font-family;
+    font-size: $x-large-font-size;
+  }
+
+  #projects-section{
+    margin-top: 3%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .project-container {
+      width: 23%;
+      margin-right: 2%;
+      margin-bottom: 2%;
+    }
+  }
+
+}

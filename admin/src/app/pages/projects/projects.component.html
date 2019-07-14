@@ -1,1 +1,8 @@
-<p>projects works!</p>
+<div id="page-container">
+    <h1 id="page-title">Projects</h1>
+    <div id="projects-section">
+        <div *ngFor="let project of projects" class="project-container">
+            <app-project [project]="project"></app-project>
+        </div>
+    </div>
+</div>

@@ -9,6 +9,7 @@
     width: 20%;
     img{
       width: 100%;
+      cursor: pointer;
     }
   }
 
@@ -22,6 +23,8 @@
     h3 {
       font-size: $medium-font-size;
       font-family: $primary-font-family;
+      cursor: pointer;
+      width: fit-content;
     }
 
     p {
