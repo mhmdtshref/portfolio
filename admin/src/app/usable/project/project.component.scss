@@ -1,0 +1,17 @@
+@import "../../../global-variables";
+
+.project {
+  width: 100%;
+  img {
+    width: 100%;
+    border: 1px solid gray;
+  }
+
+  h4{
+    font-family: $primary-font-family;
+    font-size: $medium-font-size;
+    width: 100%;
+    text-align: center;
+    margin-top: 3%;
+  }
+}
