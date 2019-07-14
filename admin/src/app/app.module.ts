@@ -11,6 +11,7 @@ import { SectionComponent } from './section/section.component';
 import { MainComponent } from './pages/main/main.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { ProjectComponent } from './usable/project/project.component';
+import { PopUpComponent } from './usable/pop-up/pop-up.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ProjectComponent } from './usable/project/project.component';
     MainComponent,
     ProjectsComponent,
     ProjectComponent,
+    PopUpComponent,
   ],
   imports: [
     BrowserModule,
