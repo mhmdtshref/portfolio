@@ -6,7 +6,7 @@ import { ProjectsComponent } from './pages/projects/projects.component';
 const routes: Routes = [ { path: '', component: MainComponent }, { path: 'projects', component: ProjectsComponent } ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
