@@ -9,8 +9,9 @@ ul {
   background-color: $primary-background-color;
 }
 
-li a {
+li {
   text-decoration: none;
   color: $primary-font-color;
   font-family: $primary-font-family;
+  cursor: pointer;
 }
