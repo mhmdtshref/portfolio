@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-pop-up',
@@ -8,6 +8,20 @@ import { Component, OnInit } from '@angular/core';
 export class PopUpComponent implements OnInit {
 
   constructor() { }
+
+  @Input() title: string;
+  @Input() message: string;
+  @Input() redButton: string;
+  @Input() greenButton: string;
+  @Input() action: any;
+
+  onRedClicked = () => {
+      this.action(1);
+  }
+
+  onGreenClicked = () => {
+      this.action(0);
+  }
 
   ngOnInit() {
   }
