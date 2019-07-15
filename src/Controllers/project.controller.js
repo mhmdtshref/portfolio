@@ -45,4 +45,17 @@ const store = (req, res) => {
     });
 };
 
-module.exports = { index, get, store };
+const del = (req, res) => {
+  const { id } = req.params;
+  Project.deleteOne({ id })
+    .then(() => {
+      Response.success(res);
+    })
+    .catch((error) => {
+      Response.error.database(res, error);
+    });
+};
+
+module.exports = {
+  index, get, store, del,
+};
