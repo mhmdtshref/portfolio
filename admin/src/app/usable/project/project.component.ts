@@ -11,6 +11,21 @@ export class ProjectComponent implements OnInit {
 
   @Input() project: object;
 
+  deleteClicked = false;
+
+  deleteAction = (confirmState) => {
+      if (confirmState) {
+          console.log('DELETED!');
+      } else {
+          console.log('Deletion Stoped!');
+          this.deleteClicked = false;
+      }
+  }
+
+  onClickDeleteButton = () => {
+      this.deleteClicked = true;
+  }
+
   ngOnInit() {
   }
 
