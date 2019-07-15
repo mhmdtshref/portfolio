@@ -1,4 +1,12 @@
 <div class="project">
-    <img src="{{project.imageUrl}}">
+    <div class="image-box">
+        <img src="{{project.imageUrl}}">
+        <div class="operations-bar">
+            <i class="far fa-trash-alt delete-icon" (click)="onClickDeleteButton()"></i>
+            <i class="far fa-edit edit-icon"></i>
+        </div>
+    </div>
     <h4>{{project.name}}</h4>
 </div>
+<app-pop-up *ngIf="deleteClicked" title="Confirm Project Delete" message="Are you sure you want to delete the project: {{project.name}}?" greenButton="Keep" redButton="Delete" [action]="deleteAction">
+</app-pop-up>

@@ -1,0 +1,53 @@
+@import "../../../global-variables";
+
+#popup {
+  position: fixed;
+  top: 40%;
+  height: 20%;
+  bottom: 40%;
+  right: 40%;
+  width: 20%;
+  left: 40%;
+  background-color: white;
+  border-radius: 15px;
+
+  h3{
+    font-size: $medium-font-size;
+    text-align: center;
+    margin-top: 3%;
+    font-family: $primary-font-family;
+  }
+
+  p {
+    margin-left: 7%;
+    margin-top: 3%;
+    font-family: $secondary-font-family;
+  }
+
+  #buttons-container {
+    display: flex;
+    justify-content: space-around;
+    padding-right: 20%;
+    padding-left: 20%;
+    margin-top: 12%;
+    .button {
+      width: 30%;
+      color: white;
+      font-family: $secondary-font-family;
+      border-radius: 15px;
+      height: 30px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .red{
+      background-color: red;
+    }
+
+    .green{
+      background-color: green;
+    }
+
+  }
+
+}
