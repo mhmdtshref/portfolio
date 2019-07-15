@@ -47,7 +47,7 @@ const store = (req, res) => {
 
 const del = (req, res) => {
   const { id } = req.params;
-  Project.deleteOne({ id })
+  Project.deleteOne({ _id: id })
     .then(() => {
       Response.success(res);
     })
