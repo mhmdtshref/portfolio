@@ -22,6 +22,10 @@ export class ProjectsComponent implements OnInit {
             });
     }
 
+    refreshList = () => {
+        this.getProjectsList();
+    };
+
     ngOnInit() {
         this.getProjectsList();
     }
