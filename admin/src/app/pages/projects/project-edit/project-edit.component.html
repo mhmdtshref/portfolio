@@ -1,33 +1,33 @@
 <div id="project-edit-page">
     <div id="page-content">
         <div id="title-container">
-            <h1>Edit Project: {{project.name || 'Loading...'}}</h1>
+            <h1>Edit Project: {{name || 'Loading...'}}</h1>
         </div>
 
         <div id="form-container">
-            <form>
+            <form (submit)="saveHandler()">
                 <label>
-                    <input ngModel="{{name || 'Loading...'}}" type="text" name="name" placeholder="Project Name.." disabled>
+                    <input ngModel="{{project.name || 'Loading...'}}" type="text" name="name" placeholder="Project Name.." [attr.disabled]="disabled">
                 </label>
                 <label>
-                    <input ngModel="{{link || 'Loading...'}}" type="text" name="link" placeholder="Project Link.." disabled>
+                    <input ngModel="{{project.link || 'Loading...'}}" type="text" name="link" placeholder="Project Link.." [attr.disabled]="disabled">
                 </label>
                 <label>
-                    <input ngModel="{{gitLink || 'Loading...'}}" type="text" name="gitLink" placeholder="Project Git Link.." disabled>
+                    <input ngModel="{{project.gitLink || 'Loading...'}}" type="text" name="gitLink" placeholder="Project Git Link.." [attr.disabled]="disabled">
                 </label>
                 <label>
-                    <input ngModel="{{imageUrl || 'Loading...'}}" type="text" name="imageUrl" placeholder="Project image URL.." disabled>
+                    <input ngModel="{{project.imageUrl || 'Loading...'}}" type="text" name="imageUrl" placeholder="Project image URL.." [attr.disabled]="disabled">
                 </label>
                 <label>
-                    <input [(ngModel)]="teamWork" type="checkbox" name="teamWork" disabled>
+                    <input [(ngModel)]="project.teamWork" type="checkbox" name="teamWork" [attr.disabled]="disabled">
                     Team work?
                 </label>
 
                 <label>
-                    <textarea ngModel="{{description || 'Loading...'}}" type="text" name="description" placeholder="Project Description.." disabled></textarea>
+                    <textarea ngModel="{{project.description || 'Loading...'}}" type="text" name="description" placeholder="Project Description.." [attr.disabled]="disabled"></textarea>
                 </label>
 
-                <button disabled>Save changes</button>
+                <button [attr.disabled]="disabled">Save changes</button>
             </form>
         </div>
     </div>
