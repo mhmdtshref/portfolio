@@ -5,18 +5,18 @@
         </div>
 
         <div id="form-container">
-            <form (submit)="saveHandler()">
+            <form (ngSubmit)="saveHandler($event)">
                 <label>
-                    <input ngModel="{{project.name || 'Loading...'}}" type="text" name="name" placeholder="Project Name.." [attr.disabled]="disabled">
+                    <input [(ngModel)]="project.name" type="text" name="name" placeholder="Project Name.." [attr.disabled]="disabled">
                 </label>
                 <label>
-                    <input ngModel="{{project.link || 'Loading...'}}" type="text" name="link" placeholder="Project Link.." [attr.disabled]="disabled">
+                    <input [(ngModel)]="project.link" type="text" name="link" placeholder="Project Link.." [attr.disabled]="disabled">
                 </label>
                 <label>
-                    <input ngModel="{{project.gitLink || 'Loading...'}}" type="text" name="gitLink" placeholder="Project Git Link.." [attr.disabled]="disabled">
+                    <input [(ngModel)]="project.gitLink" type="text" name="gitLink" placeholder="Project Git Link.." [attr.disabled]="disabled">
                 </label>
                 <label>
-                    <input ngModel="{{project.imageUrl || 'Loading...'}}" type="text" name="imageUrl" placeholder="Project image URL.." [attr.disabled]="disabled">
+                    <input [(ngModel)]="project.imageUrl" type="text" name="imageUrl" placeholder="Project image URL.." [attr.disabled]="disabled">
                 </label>
                 <label>
                     <input [(ngModel)]="project.teamWork" type="checkbox" name="teamWork" [attr.disabled]="disabled">
@@ -24,7 +24,7 @@
                 </label>
 
                 <label>
-                    <textarea ngModel="{{project.description || 'Loading...'}}" type="text" name="description" placeholder="Project Description.." [attr.disabled]="disabled"></textarea>
+                    <textarea [(ngModel)]="project.description" type="text" name="description" placeholder="Project Description.." [attr.disabled]="disabled"></textarea>
                 </label>
 
                 <button [attr.disabled]="disabled">Save changes</button>
