@@ -7,5 +7,6 @@ router.get('/', Project.index);
 router.get('/:id', Project.get);
 router.post('/', Project.store);
 router.delete('/:id', Project.del);
+router.patch('/:id', Project.edit);
 
 module.exports = router;
