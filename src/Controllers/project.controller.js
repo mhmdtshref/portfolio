@@ -56,6 +56,24 @@ const del = (req, res) => {
     });
 };
 
+const edit = (req, res) => {
+  const { id } = req.params;
+  const {
+    name, link, gitLink, imageUrl, teamWork, description,
+  } = req.body;
+  const updatedProject = {
+    name, link, gitLink, imageUrl, teamWork, description,
+  };
+
+  Project.findByIdAndUpdate(id, updatedProject, (error) => {
+    if (error) {
+      Response.error.database(res, error);
+    } else {
+      Response.success(res);
+    }
+  });
+};
+
 module.exports = {
-  index, get, store, del,
+  index, get, store, del, edit,
 };
