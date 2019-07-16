@@ -13,6 +13,7 @@ import { ProjectsComponent } from './pages/projects/projects.component';
 import { ProjectComponent } from './usable/project/project.component';
 import { PopUpComponent } from './usable/pop-up/pop-up.component';
 import { ProjectEditComponent } from './pages/projects/project-edit/project-edit.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -27,11 +28,12 @@ import { ProjectEditComponent } from './pages/projects/project-edit/project-edit
     PopUpComponent,
     ProjectEditComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
