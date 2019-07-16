@@ -12,6 +12,8 @@ import { MainComponent } from './pages/main/main.component';
 import { ProjectsComponent } from './pages/projects/projects.component';
 import { ProjectComponent } from './usable/project/project.component';
 import { PopUpComponent } from './usable/pop-up/pop-up.component';
+import { ProjectEditComponent } from './pages/projects/project-edit/project-edit.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -24,12 +26,14 @@ import { PopUpComponent } from './usable/pop-up/pop-up.component';
     ProjectsComponent,
     ProjectComponent,
     PopUpComponent,
+    ProjectEditComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        FormsModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
