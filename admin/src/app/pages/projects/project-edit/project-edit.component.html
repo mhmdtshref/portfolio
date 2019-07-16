@@ -1,1 +1,34 @@
-<p>project-edit works!</p>
+<div id="project-edit-page">
+    <div id="page-content">
+        <div id="title-container">
+            <h1>Edit Project: {{project.name || 'Loading...'}}</h1>
+        </div>
+
+        <div id="form-container">
+            <form>
+                <label>
+                    <input ngModel="{{name || 'Loading...'}}" type="text" name="name" placeholder="Project Name.." disabled>
+                </label>
+                <label>
+                    <input ngModel="{{link || 'Loading...'}}" type="text" name="link" placeholder="Project Link.." disabled>
+                </label>
+                <label>
+                    <input ngModel="{{gitLink || 'Loading...'}}" type="text" name="gitLink" placeholder="Project Git Link.." disabled>
+                </label>
+                <label>
+                    <input ngModel="{{imageUrl || 'Loading...'}}" type="text" name="imageUrl" placeholder="Project image URL.." disabled>
+                </label>
+                <label>
+                    <input [(ngModel)]="teamWork" type="checkbox" name="teamWork" disabled>
+                    Team work?
+                </label>
+
+                <label>
+                    <textarea ngModel="{{description || 'Loading...'}}" type="text" name="description" placeholder="Project Description.." disabled></textarea>
+                </label>
+
+                <button disabled>Save changes</button>
+            </form>
+        </div>
+    </div>
+</div>
