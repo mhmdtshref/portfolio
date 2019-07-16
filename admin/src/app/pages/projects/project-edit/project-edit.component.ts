@@ -12,17 +12,33 @@ export class ProjectEditComponent implements OnInit {
   constructor(private router: ActivatedRoute, private requestService: RequestsService) { }
 
   id = '';
-  name = null;
-  link = null;
-  gitLink = null;
-  imageUrl = null;
-  teamWork = false;
-  description = null;
+  name = '';
+  disabled = true;
+  project = {
+      name: null,
+      link: null,
+      gitLink: null,
+      imageUrl: null,
+      teamWork: null,
+      description: null,
+  };
 
-  loading = 'Loading...';
+
+    saveHandler = () => {
+        console.log('PROJECT:: ', this.project);
+    }
 
   ngOnInit() {
       this.id = this.router.snapshot.paramMap.get('id');
+      this.requestService.getProject(this.id)
+          .then((project: any) => {
+              this.project = project;
+              this.name = project.name;
+              this.disabled = null;
+          })
+          .catch((error) => {
+              alert(`Error: ${error.message}`);
+          });
   }
 
 }
