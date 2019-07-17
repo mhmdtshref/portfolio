@@ -4,12 +4,21 @@ const express = require('express');
 const app = express();
 
 const {
-  sectionRouter, cardRouter, contactUsRouter, socialRouter, projectRouter, serviceRouter, technologyRouter, languageRouter,
+  sectionRouter,
+  cardRouter,
+  contactUsRouter,
+  socialRouter,
+  projectRouter,
+  serviceRouter,
+  technologyRouter,
+  languageRouter,
 } = require('./router/');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, '..', 'client', 'dist', 'client')));
+
+app.use('/admin', express.static(path.join(__dirname, '..', 'admin', 'dist', 'admin')));
+app.use('', express.static(path.join(__dirname, '..', 'client', 'dist', 'client')));
 
 app.use('/api/section', sectionRouter);
 app.use('/api/card', cardRouter);
