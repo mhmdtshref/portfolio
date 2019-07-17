@@ -4,7 +4,14 @@ const express = require('express');
 const app = express();
 
 const {
-  sectionRouter, cardRouter, contactUsRouter, socialRouter, projectRouter, serviceRouter, technologyRouter, languageRouter,
+  sectionRouter,
+  cardRouter,
+  contactUsRouter,
+  socialRouter,
+  projectRouter,
+  serviceRouter,
+  technologyRouter,
+  languageRouter,
 } = require('./router/');
 
 app.use(express.json());
