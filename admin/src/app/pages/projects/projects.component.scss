@@ -9,8 +9,18 @@
     font-size: $x-large-font-size;
   }
 
+  #create-project-button {
+    background-color: $create-green-color;
+    border-radius: 10px;
+    height: 2vw;
+    width: 10%;
+    font-size: $small-font-size;
+    color: white;
+    margin-top: 4%;
+  }
+
   #projects-section{
-    margin-top: 3%;
+    margin-top: 1%;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
