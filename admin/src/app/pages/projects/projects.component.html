@@ -1,5 +1,6 @@
 <div id="page-container">
     <h1 id="page-title">Projects</h1>
+    <button id="create-project-button" (click)="toCreateProject()">+ Create Project</button>
     <div id="projects-section">
         <div *ngFor="let project of projects" class="project-container">
             <app-project [project]="project" [refreshList]="refreshList"></app-project>

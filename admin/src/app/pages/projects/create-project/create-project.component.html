@@ -1,0 +1,34 @@
+<div id="create-project-page">
+    <div id="page-content">
+        <div id="title-container">
+            <h1>Create New Project</h1>
+        </div>
+
+        <div id="form-container">
+            <form (ngSubmit)="saveHandler($event)">
+                <label>
+                    <input [(ngModel)]="project.name" type="text" name="name" placeholder="Project Name.." >
+                </label>
+                <label>
+                    <input [(ngModel)]="project.link" type="text" name="link" placeholder="Project Link.." >
+                </label>
+                <label>
+                    <input [(ngModel)]="project.gitLink" type="text" name="gitLink" placeholder="Project Git Link.." >
+                </label>
+                <label>
+                    <input [(ngModel)]="project.imageUrl" type="text" name="imageUrl" placeholder="Project image URL.." >
+                </label>
+                <label>
+                    <input [(ngModel)]="project.teamWork" type="checkbox" name="teamWork" >
+                    Team work?
+                </label>
+
+                <label>
+                    <textarea [(ngModel)]="project.description" type="text" name="description" placeholder="Project Description.." ></textarea>
+                </label>
+
+                <button>Create</button>
+            </form>
+        </div>
+    </div>
+</div>
