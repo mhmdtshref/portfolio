@@ -11,7 +11,7 @@ export class RequestsService {
   deleteProject = (id) => new Promise((resolve, reject) => {
       this.http.delete(`/api/project/${id}`)
           .subscribe((res: any) => {
-              if (res.success){
+              if (res.success) {
                   resolve();
               } else {
                   reject(new Error(res.error));
@@ -29,7 +29,7 @@ export class RequestsService {
       });
     })
 
-    editProject = (id, project) => {
+    editProject = (id, project) => new Promise((resolve, reject) => {
         const params = new HttpParams()
             .set('name', project.name)
             .set('link', project.link)
@@ -41,12 +41,12 @@ export class RequestsService {
         const headers = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' });
         this.http.patch(`/api/project/${id}`, params.toString(), { headers })
             .subscribe((res: any) => {
-                if(res.success){
+                if (res.success) {
                     alert(`Saved successfully!`);
                 } else {
                     alert(`Save Error: ${res.error}`);
                 }
             });
-    }
+    })
 
 }
