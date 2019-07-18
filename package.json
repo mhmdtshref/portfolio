@@ -34,6 +34,7 @@
   "dependencies": {
     "env2": "^2.2.2",
     "express": "^4.17.1",
+    "express-history-api-fallback": "^2.2.1",
     "mongoose": "^5.5.14",
     "nodemailer": "^6.2.1"
   },
