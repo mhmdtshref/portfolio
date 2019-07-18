@@ -57,7 +57,7 @@ export class ProjectViewComponent implements OnInit {
 
   ngOnInit() {
       this.id = this.activatedRouter.snapshot.paramMap.get('id');
-      this.requestsServices.getProject(this.id).then((project) => {
+      this.requestsServices.getProject(this.id).then((project: any) => {
           this.project = project;
           this.project[this.projectKeys[3]] = this.project[this.projectKeys[3]] ? 'Yes' : 'No';
       }).catch((error) => {
