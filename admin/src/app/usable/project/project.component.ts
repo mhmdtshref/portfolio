@@ -37,6 +37,10 @@ export class ProjectComponent implements OnInit {
         this.router.navigate(['projects', this.project._id, 'edit']);
     }
 
+    toProjectView = () => {
+        this.router.navigate(['projects', this.project._id]);
+    }
+
   ngOnInit() {
   }
 

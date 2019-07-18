@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import { RequestsService } from '../../../usable/requests.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { RequestsService } from '../../../usable/requests.service';
 })
 export class ProjectEditComponent implements OnInit {
 
-  constructor(private router: ActivatedRoute, private requestService: RequestsService) { }
+  constructor(private activatedRouter: ActivatedRoute, private requestService: RequestsService, private router: Router) { }
 
   id = '';
   loading = 'Loading ...';
@@ -27,11 +27,15 @@ export class ProjectEditComponent implements OnInit {
 
     saveHandler = (event) => {
         event.preventDefault();
-        this.requestService.editProject(this.id, this.project);
+        this.requestService.editProject(this.id, this.project).then(() => {
+            this.router.navigate(['projects', this.id]);
+        }).catch((error) => {
+            alert(`Error: ${error.message}`);
+        });
     }
 
   ngOnInit() {
-      this.id = this.router.snapshot.paramMap.get('id');
+      this.id = this.activatedRouter.snapshot.paramMap.get('id');
       this.requestService.getProject(this.id)
           .then((project: any) => {
               this.project = project;

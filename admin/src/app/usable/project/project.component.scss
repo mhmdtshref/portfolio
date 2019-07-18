@@ -8,6 +8,7 @@
     border: 1px solid gray;
     img {
       width: 100%;
+      cursor: pointer;
     }
 
     .operations-bar {
@@ -47,11 +48,12 @@
 
   }
 
-  h4{
+  .project-name{
     font-family: $primary-font-family;
     font-size: $medium-font-size;
     width: 100%;
     text-align: center;
     margin-top: 3%;
+    cursor: pointer;
   }
 }

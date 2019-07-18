@@ -1,0 +1,21 @@
+<div id="view-project-page">
+    <div id="page-content">
+        <div id="title-container">
+            <h1>{{project.name}}</h1>
+        </div>
+        <div id="details-list-container">
+            <div class="detail-container" *ngFor="let projectKey of projectKeys">
+                <h3>{{toRegularString(projectKey)}}</h3>
+                <input [(ngModel)]="project[projectKey]" disabled>
+            </div>
+        </div>
+        <div id="controls-container">
+            <i class="far fa-trash-alt delete-icon" (click)="onClickDeleteButton()"></i>
+            <i class="far fa-edit edit-icon" (click)="onClickEditButton()"></i>
+        </div>
+    </div>
+
+    <app-pop-up *ngIf="deleteClicked" title="Confirm Project Delete" message="Are you sure you want to delete the project: {{project.name}}?" greenButton="Keep" redButton="Delete" [action]="deleteAction">
+    </app-pop-up>
+
+</div>
