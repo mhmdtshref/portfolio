@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import { ListsService } from '../lists.service';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-projects',
@@ -10,7 +11,7 @@ export class ProjectsComponent implements OnInit {
 
     projects = [];
 
-    constructor(private listsService: ListsService) { }
+    constructor(private listsService: ListsService, private router: Router) { }
 
     getProjectsList = () => {
         this.listsService.getProjectsList()
@@ -20,6 +21,10 @@ export class ProjectsComponent implements OnInit {
             .catch((error) => {
                 alert(`Request Error: ${error.message}`);
             });
+    }
+
+    toCreateProject = () => {
+        this.router.navigate(['projects', 'create']);
     }
 
     refreshList = () => {
