@@ -1,0 +1,62 @@
+@import "../../../../global-variables";
+
+#create-project-page{
+  background-color: $secondary-background-color;
+  min-height: 90vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  #page-content {
+    width: 40%;
+    #title-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 8vw;
+      h1{
+        font-family: $primary-font-family;
+        font-size: $x-large-font-size;
+      }
+    }
+
+    #form-container {
+      width: 100%;
+      form{
+        display: flex;
+        height: 22vw;
+        flex-wrap: wrap;
+        justify-content: center;
+        label{
+          width: 100%;
+          margin: 0.8% auto;
+          input[type='text'], textarea{
+            width: 100%;
+            min-height: 5vh;
+            border-radius: 10px;
+            border: none;
+            padding-left: 3%;
+            font-size: $small-font-size;
+            resize: none;
+            box-sizing: border-box;
+          }
+          textarea{
+            height: 10vw;
+            padding-top: 12px;
+          }
+        }
+        button{
+          width: 20%;
+          background-color: #4CAF50;
+          color: $primary-font-color;
+          border: none;
+          border-radius: 10px;
+          height: 2vw;
+          font-size: $small-font-size;
+        }
+      }
+    }
+  }
+
+}
