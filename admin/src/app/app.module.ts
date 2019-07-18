@@ -15,6 +15,7 @@ import { PopUpComponent } from './usable/pop-up/pop-up.component';
 import { ProjectEditComponent } from './pages/projects/project-edit/project-edit.component';
 import {FormsModule} from "@angular/forms";
 import { ProjectViewComponent } from './pages/projects/project-view/project-view.component';
+import { CreateProjectComponent } from './pages/projects/create-project/create-project.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ProjectViewComponent } from './pages/projects/project-view/project-view
     PopUpComponent,
     ProjectEditComponent,
     ProjectViewComponent,
+    CreateProjectComponent,
   ],
     imports: [
         BrowserModule,
