@@ -42,9 +42,9 @@ export class RequestsService {
         this.http.patch(`/api/project/${id}`, params.toString(), { headers })
             .subscribe((res: any) => {
                 if (res.success) {
-                    alert(`Saved successfully!`);
+                    resolve();
                 } else {
-                    alert(`Save Error: ${res.error}`);
+                    reject(new Error(res.error));
                 }
             });
     })
