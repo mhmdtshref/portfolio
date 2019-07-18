@@ -12,7 +12,15 @@ export class ProjectViewComponent implements OnInit {
   constructor(private requestsServices: RequestsService, private activatedRouter: ActivatedRoute, private router: Router) { }
 
   id = '';
-  project = {};
+  loading = 'Loading...';
+  project = {
+      name: this.loading,
+      link: this.loading,
+      gitLink: this.loading,
+      teamWork: this.loading,
+      imageUrl: this.loading,
+      description: this.loading,
+  };
   projectKeys = [ 'link', 'gitLink', 'teamWork', 'imageUrl', 'description'];
 
   deleteClicked = false;
