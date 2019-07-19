@@ -6,6 +6,7 @@ const projectRouter = require('./project.router');
 const serviceRouter = require('./service.router');
 const technologyRouter = require('./technology.router');
 const languageRouter = require('./language.router');
+const authRouter = require('./auth.router');
 
 module.exports = {
   sectionRouter,
@@ -16,4 +17,5 @@ module.exports = {
   serviceRouter,
   technologyRouter,
   languageRouter,
+  authRouter,
 };
