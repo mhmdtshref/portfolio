@@ -6,7 +6,8 @@ const Project = require('./project.controller');
 const Service = require('./service.controller');
 const Technology = require('./technology.controller');
 const Language = require('./language.controller');
+const Auth = require('./auth.controller');
 
 module.exports = {
-  Section, Card, ContactUs, Social, Project, Service, Technology, Language,
+  Section, Card, ContactUs, Social, Project, Service, Technology, Language, Auth,
 };
