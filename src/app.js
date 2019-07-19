@@ -13,6 +13,7 @@ const {
   serviceRouter,
   technologyRouter,
   languageRouter,
+  authRouter,
 } = require('./router/');
 
 app.use(express.json());
@@ -27,6 +28,7 @@ app.use('/api/project', projectRouter);
 app.use('/api/service', serviceRouter);
 app.use('/api/technology', technologyRouter);
 app.use('/api/language', languageRouter);
+app.use('/api/auth', authRouter);
 
 
 const adminRoot = path.join(__dirname, '..', 'admin', 'dist', 'admin');
