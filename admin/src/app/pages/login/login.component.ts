@@ -21,7 +21,6 @@ export class LoginComponent implements OnInit {
       event.preventDefault();
       this.authServices.login(this.username, this.password)
           .then(() => {
-              this.router.navigate(['']);
               this.setAuth();
           })
           .catch(() => {
