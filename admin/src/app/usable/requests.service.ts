@@ -86,8 +86,8 @@ export class RequestsService {
     })
 
     checkAuth = () => new Promise((resolve, reject) => {
-      this.http.get('/api/checkAuth').subscribe((res: any) => {
-          if(res.success){
+      this.http.get('/api/auth/checkAuth').subscribe((res: any) => {
+          if (res.success) {
               resolve();
           } else {
               reject(new Error(res.error));
