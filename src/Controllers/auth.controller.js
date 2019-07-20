@@ -17,4 +17,20 @@ const login = (req, res) => {
   }
 };
 
-module.exports = { login };
+const checkAuth = (req, res) => {
+  const { token } = req.cookies;
+  if (token) {
+    Response.error.authenticationError(res, new Error('No Token'));
+  } else {
+    const { SECRET } = process.env;
+    jwt.verify(token, SECRET, (verifyError, decoded) => {
+      if (verifyError || !decoded) {
+        Response.error.serverError(res, verifyError || new Error('Empty decoded'));
+      } else {
+        Response.success(res);
+      }
+    });
+  }
+};
+
+module.exports = { login, checkAuth };
