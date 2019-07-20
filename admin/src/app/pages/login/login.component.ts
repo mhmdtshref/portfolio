@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthService} from "../../usable/auth.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -7,7 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authServices: AuthService, private router: Router) { }
+
+  username = '';
+  password = '';
+
+  loginClickHandler = (event) => {
+      event.preventDefault();
+      this.authServices.login(this.username, this.password)
+          .then(() => {
+              this.router.navigate(['']);
+          })
+          .catch(() => {
+              alert('Username and Password are not matched!');
+          });
+  }
 
   ngOnInit() {
   }
