@@ -10,11 +10,15 @@ const serverError = (res, error) => {
   res.json({ success: false, error: `Server Error: ${error.message}` });
 };
 
+const authenticationError = (res, error) => {
+  res.json({ success: false, error: `Authentication Error: ${error.message}` });
+};
+
 const success = (res, data) => {
   res.json({ success: true, data });
 };
 
 module.exports = {
-  error: { database: dbError, badRequest: requestError, serverError: serverError },
+  error: { database: dbError, badRequest: requestError, serverError, authenticationError, },
   success,
 };
