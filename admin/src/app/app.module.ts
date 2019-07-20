@@ -17,6 +17,7 @@ import { ProjectEditComponent } from './pages/projects/project-edit/project-edit
 import {FormsModule} from "@angular/forms";
 import { ProjectViewComponent } from './pages/projects/project-view/project-view.component';
 import { CreateProjectComponent } from './pages/projects/create-project/create-project.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { CreateProjectComponent } from './pages/projects/create-project/create-p
     ProjectEditComponent,
     ProjectViewComponent,
     CreateProjectComponent,
+    LoginComponent,
   ],
     imports: [
         BrowserModule,
