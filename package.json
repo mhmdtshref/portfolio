@@ -32,6 +32,7 @@
   },
   "homepage": "https://github.com/mhmdtshref/portfolio#readme",
   "dependencies": {
+    "cookie-parser": "^1.4.4",
     "env2": "^2.2.2",
     "express": "^4.17.1",
     "express-history-api-fallback": "^2.2.1",
