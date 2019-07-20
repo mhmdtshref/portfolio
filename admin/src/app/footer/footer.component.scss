@@ -1,0 +1,33 @@
+@import "../../global-variables";
+
+#footer {
+  width: 100%;
+  height: 15vh;
+  background-color: $primary-background-color;
+  display: flex;
+  justify-content: center;
+  #footer-content {
+    width: 95%;
+    display: flex;
+    justify-content: flex-end;
+    #logout-button-container {
+      width: 10%;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      button {
+        width: 100%;
+        height: 2.5vw;
+        border-radius: 20px;
+        border: none;
+        font-size: $medium-font-size;
+        font-family: $secondary-font-family;
+        background-color: #E77E23;
+        color: white;
+      }
+    }
+
+  }
+
+}
