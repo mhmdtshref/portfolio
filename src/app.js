@@ -1,5 +1,6 @@
 const path = require('path');
 const express = require('express');
+const cookieParser = require('cookie-parser');
 const fallback = require('express-history-api-fallback');
 
 const app = express();
@@ -13,10 +14,12 @@ const {
   serviceRouter,
   technologyRouter,
   languageRouter,
+  authRouter,
 } = require('./router/');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
 
 app.use('/api/section', sectionRouter);
 app.use('/api/card', cardRouter);
@@ -27,6 +30,7 @@ app.use('/api/project', projectRouter);
 app.use('/api/service', serviceRouter);
 app.use('/api/technology', technologyRouter);
 app.use('/api/language', languageRouter);
+app.use('/api/auth', authRouter);
 
 
 const adminRoot = path.join(__dirname, '..', 'admin', 'dist', 'admin');

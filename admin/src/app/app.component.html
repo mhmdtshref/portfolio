@@ -1,2 +1,4 @@
 <app-navbar></app-navbar>
-<router-outlet></router-outlet>
+<router-outlet *ngIf="auth"></router-outlet>
+<app-login *ngIf="!auth" [setAuth]="setAuth"></app-login>
+<app-footer *ngIf="auth" [unAuth]="removeAuth"></app-footer>
