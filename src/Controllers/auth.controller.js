@@ -19,7 +19,7 @@ const login = (req, res) => {
 
 const checkAuth = (req, res) => {
   const { token } = req.cookies;
-  if (token) {
+  if (!token) {
     Response.error.authenticationError(res, new Error('No Token'));
   } else {
     const { SECRET } = process.env;
