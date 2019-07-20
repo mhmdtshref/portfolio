@@ -69,4 +69,30 @@ export class RequestsService {
             });
     })
 
+    loginRequest = (username, password) => new Promise((resolve, reject) => {
+        const params = new HttpParams()
+            .set('username', username)
+            .set('password', password);
+
+        const headers = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' });
+
+        this.http.post(`/api/auth/login`, params.toString(), { headers }).subscribe((res: any) => {
+            if (res.success){
+                resolve(res.data);
+            } else {
+                reject(new Error(res.error));
+            }
+        });
+    })
+
+    checkAuth = () => new Promise((resolve, reject) => {
+      this.http.get('/api/checkAuth').subscribe((res: any) => {
+          if(res.success){
+              resolve();
+          } else {
+              reject(new Error(res.error));
+          }
+      });
+    })
+
 }
