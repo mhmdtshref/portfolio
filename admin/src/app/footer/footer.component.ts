@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
@@ -7,7 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private cookiesServices: CookieService, private router: Router) { }
+
+
+  @Input() unAuth: any;
+
+  logoutClickHandler = (event) => {
+      event.preventDefault();
+      this.cookiesServices.delete('token');
+      this.unAuth();
+  }
 
   ngOnInit() {
   }
