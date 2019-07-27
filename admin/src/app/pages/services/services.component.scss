@@ -1,0 +1,34 @@
+@import "../../../global-variables";
+
+#page-container{
+  padding: 5% 10%;
+  min-height: 100vh;
+  background-color: $secondary-background-color;
+  #page-title {
+    font-family: $primary-font-family;
+    font-size: $x-large-font-size;
+  }
+
+  #create-service-button {
+    background-color: $create-green-color;
+    border-radius: 10px;
+    height: 2vw;
+    width: 10%;
+    font-size: $small-font-size;
+    color: white;
+    margin-top: 4%;
+  }
+
+  #services-section{
+    margin-top: 1%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    .service-container {
+      width: 23%;
+      margin-right: 2%;
+      margin-bottom: 2%;
+    }
+  }
+
+}
