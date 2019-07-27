@@ -19,6 +19,11 @@ import { ProjectViewComponent } from './pages/projects/project-view/project-view
 import { CreateProjectComponent } from './pages/projects/create-project/create-project.component';
 import { LoginComponent } from './pages/login/login.component';
 import { FooterComponent } from './footer/footer.component';
+import { ServicesComponent } from './pages/services/services.component';
+import { CreateServiceComponent } from './pages/services/create-service/create-service.component';
+import { ServiceEditComponent } from './pages/services/service-edit/service-edit.component';
+import { ServiceViewComponent } from './pages/services/service-view/service-view.component';
+import { ServiceComponent } from './usable/service/service.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +41,11 @@ import { FooterComponent } from './footer/footer.component';
     CreateProjectComponent,
     LoginComponent,
     FooterComponent,
+    ServicesComponent,
+    CreateServiceComponent,
+    ServiceEditComponent,
+    ServiceViewComponent,
+    ServiceComponent,
   ],
     imports: [
         BrowserModule,
