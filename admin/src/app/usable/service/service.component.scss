@@ -1,0 +1,43 @@
+@import "../../../global-variables";
+
+.service-box {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15%;
+  padding-bottom: 17%;
+  box-sizing: border-box;
+  height: 100%;
+  background-color: #E77E23;
+  .img-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    img {
+      width: 10%;
+    }
+
+  }
+
+  .name-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    h3 {
+      font-family: $primary-font-family;
+      font-size: $medium-font-size;
+    }
+  }
+
+
+  .brief-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 8%;
+    p {
+      width: 80%;
+      text-align: center;
+      font-family: $secondary-font-family;
+    }
+  }
+
+}
