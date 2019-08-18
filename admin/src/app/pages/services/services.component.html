@@ -1,0 +1,9 @@
+<div id="page-container">
+    <h1 id="page-title">Services</h1>
+    <button id="create-service-button" (click)="toCreateService()">+ Create Service</button>
+    <div id="services-section">
+        <div *ngFor="let service of services" class="service-container">
+            <app-service [service]="service" [refreshList]="refreshList"></app-service>
+        </div>
+    </div>
+</div>
