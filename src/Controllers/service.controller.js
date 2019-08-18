@@ -45,4 +45,36 @@ const store = (req, res) => {
     });
 };
 
-module.exports = { index, get, store };
+const del = (req, res) => {
+  const { id } = req.params;
+  Service.deleteOne({ _id: id })
+    .then(() => {
+      Response.success(res);
+    })
+    .catch((error) => {
+      Response.error.database(res, error);
+    });
+};
+
+const edit = (req, res) => {
+  const { id } = req.params;
+  const {
+    name, imageUrl, brief, description,
+  } = req.body;
+  const updatedService = {
+    name, imageUrl, brief, description,
+  };
+
+  Service.findByIdAndUpdate(id, updatedService, (error) => {
+    if (error) {
+      Response.error.database(res, error);
+    } else {
+      Response.success(res);
+    }
+  });
+};
+
+
+module.exports = {
+  index, get, store, del, edit,
+};
