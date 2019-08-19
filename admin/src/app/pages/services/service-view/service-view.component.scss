@@ -1,0 +1,68 @@
+@import "../../../../global-variables";
+
+#view-service-page {
+  min-height: 90vh;
+  background-color: $secondary-background-color;
+  display: flex;
+  justify-content: center;
+
+  #page-content {
+    width: 50%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    #title-container{
+      h1{
+        font-size: $x-large-font-size;
+        font-family: $primary-font-family;
+      }
+    }
+
+    #details-list-container {
+      font-family: $secondary-font-family;
+      font-size: $medium-font-size;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      margin-top: 8%;
+      .detail-container {
+        display: flex;
+        width: 100%;
+        margin-bottom: 5%;
+        h3{
+          width: 15%;
+          height: 2vw;
+          font-family: $primary-font-family;
+          display: flex;
+          align-items: center;
+        }
+        input{
+          width: 85%;
+          padding-left: 2%;
+          box-sizing: border-box;
+          height: 2vw;
+          border: none;
+          border-radius: 5px;
+        }
+      }
+
+    }
+
+    #controls-container {
+      font-size: $large-font-size;
+      display: flex;
+      padding-right: 30%;
+      padding-left: 45%;
+      justify-content: space-around;
+      .delete-icon{
+        color: red;
+        cursor: pointer;
+      }
+
+      .edit-icon{
+        color: #0068ff;
+        cursor: pointer;
+      }
+    }
+
+  }
+}
