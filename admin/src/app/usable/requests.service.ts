@@ -79,6 +79,24 @@ export class RequestsService {
         });
     })
 
+    editService = (id, service) => new Promise((resolve, reject) => {
+        const params = new HttpParams()
+            .set('name', service.name)
+            .set('imageUrl', service.imageUrl)
+            .set('brief', service.brief)
+            .set('description', service.description);
+
+        const headers = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' });
+        this.http.patch(`/api/service/${id}`, params.toString(), { headers })
+            .subscribe((res: any) => {
+                if (res.success) {
+                    resolve();
+                } else {
+                    reject(new Error(res.error));
+                }
+            });
+    })
+
     createService = (service) => new Promise((resolve, reject) => {
         const params = new HttpParams()
             .set('name', service.name)
