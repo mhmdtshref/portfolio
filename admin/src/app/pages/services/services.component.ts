@@ -21,11 +21,10 @@ export class ServicesComponent implements OnInit {
             .catch((error) => {
                 alert(`Request Error: ${error.message}`);
             });
-
     }
 
     toCreateService = () => {
-        this.router.navigate(['projects', 'create']);
+        this.router.navigate(['services', 'create']);
     }
 
     refreshList = () => {
