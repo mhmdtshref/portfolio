@@ -1,1 +1,26 @@
-<p>create-service works!</p>
+<div id="create-service-page">
+    <div id="page-content">
+        <div id="title-container">
+            <h1>Create New Service</h1>
+        </div>
+
+        <div id="form-container">
+            <form (ngSubmit)="saveHandler($event)">
+                <label>
+                    <input [(ngModel)]="service.name" type="text" name="name" placeholder="Service Name.." >
+                </label>
+                <label>
+                    <input [(ngModel)]="service.imageUrl" type="text" name="imageUrl" placeholder="Service Image URL.." >
+                </label>
+                <label>
+                    <input [(ngModel)]="service.brief" type="text" name="brief" placeholder="Service Brief.." >
+                </label>
+                <label>
+                    <textarea [(ngModel)]="service.description" type="text" name="description" placeholder="Service Description.." ></textarea>
+                </label>
+
+                <button>Create</button>
+            </form>
+        </div>
+    </div>
+</div>
