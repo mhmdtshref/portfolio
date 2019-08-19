@@ -69,6 +69,16 @@ export class RequestsService {
             });
     })
 
+    getService = (id) => new Promise((resolve, reject) => {
+        this.http.get(`/api/service/${id}`).subscribe((res: any) => {
+            if (res.success) {
+                resolve(res.data);
+            } else {
+                reject(res.error);
+            }
+        });
+    })
+
     createService = (service) => new Promise((resolve, reject) => {
         const params = new HttpParams()
             .set('name', service.name)

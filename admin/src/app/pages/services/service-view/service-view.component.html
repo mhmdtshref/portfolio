@@ -1,1 +1,17 @@
-<p>service-view works!</p>
+<div id="view-service-page">
+    <div id="page-content">
+        <div id="title-container">
+            <h1>{{service.name}}</h1>
+        </div>
+        <div id="details-list-container">
+            <div class="detail-container" *ngFor="let serviceKey of serviceKeys">
+                <h3>{{toRegularString(serviceKey)}}</h3>
+                <input [(ngModel)]="service[serviceKey]" disabled>
+            </div>
+        </div>
+        <div id="controls-container">
+            <i class="far fa-trash-alt delete-icon"></i>
+            <i class="far fa-edit edit-icon"></i>
+        </div>
+    </div>
+</div>
