@@ -69,6 +69,25 @@ export class RequestsService {
             });
     })
 
+    createService = (service) => new Promise((resolve, reject) => {
+        const params = new HttpParams()
+            .set('name', service.name)
+            .set('imageUrl', service.imageUrl)
+            .set('brief', service.brief)
+            .set('description', service.description);
+
+        const headers = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' });
+
+        this.http.post('/api/service', params.toString(), { headers })
+            .subscribe((res: any) => {
+                if (res.success) {
+                    resolve();
+                } else {
+                    reject(new Error(res.error));
+                }
+            });
+    })
+
     loginRequest = (username, password) => new Promise((resolve, reject) => {
         const params = new HttpParams()
             .set('username', username)
@@ -77,7 +96,7 @@ export class RequestsService {
         const headers = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' });
 
         this.http.post(`/api/auth/login`, params.toString(), { headers }).subscribe((res: any) => {
-            if (res.success){
+            if (res.success) {
                 resolve(res.data);
             } else {
                 reject(new Error(res.error));
