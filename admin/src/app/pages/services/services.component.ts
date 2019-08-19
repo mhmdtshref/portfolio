@@ -14,28 +14,14 @@ export class ServicesComponent implements OnInit {
     constructor(private listsService: ListsService, private router: Router) { }
 
     getServicesList = () => {
-/*        this.listsService.getServicesList()
-            .then((projects: any) => {
-                this.services = projects;
+        this.listsService.getServicesList()
+            .then((services: any) => {
+                this.services = services;
             })
             .catch((error) => {
                 alert(`Request Error: ${error.message}`);
-            });*/
+            });
 
-        this.services = [
-            {
-                name: 'Web Development',
-                imageUrl: 'https://image.flaticon.com/icons/svg/54/54776.svg',
-                brief: 'Create web apps using trending web technologies or packages',
-                description: 'Create web applications using trending web technologies or packages',
-            },
-            {
-                name: 'Web Development',
-                imageUrl: 'https://image.flaticon.com/icons/svg/54/54776.svg',
-                brief: 'Create web apps using trending web technologies or packages',
-                description: 'Create web applications using trending web technologies or packages',
-            }
-        ];
     }
 
     toCreateService = () => {
