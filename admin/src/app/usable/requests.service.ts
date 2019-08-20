@@ -69,6 +69,17 @@ export class RequestsService {
             });
     })
 
+    deleteService = (id) => new Promise((resolve, reject) => {
+        this.http.delete(`/api/service/${id}`)
+            .subscribe((res: any) => {
+                if (res.success) {
+                    resolve();
+                } else {
+                    reject(new Error(res.error));
+                }
+            });
+    })
+
     getService = (id) => new Promise((resolve, reject) => {
         this.http.get(`/api/service/${id}`).subscribe((res: any) => {
             if (res.success) {
