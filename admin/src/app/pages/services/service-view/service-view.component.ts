@@ -27,6 +27,10 @@ export class ServiceViewComponent implements OnInit {
             .replace(/^./, (replacedStr) => replacedStr.toUpperCase());
     }
 
+    onClickEditButton = () => {
+        this.router.navigate(['services', this.id, 'edit']);
+    }
+
   ngOnInit() {
       this.id = this.activatedRouter.snapshot.paramMap.get('id');
       this.requestsServices.getService(this.id).then((service: any) => {
