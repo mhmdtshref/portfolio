@@ -29,7 +29,7 @@ export class NavbarComponent implements OnInit {
 
   dropDownButtonClick = () => {
     document.getElementById('dropdownMenu').classList.toggle('show');
-  };
+  }
 
 
   ngOnInit() {

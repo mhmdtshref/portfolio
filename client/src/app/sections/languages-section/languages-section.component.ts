@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {SectionsService} from "../sections.service";
+import {SectionsService} from '../sections.service';
 
 @Component({
   selector: 'app-languages-section',
