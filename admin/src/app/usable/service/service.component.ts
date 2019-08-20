@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Router} from "@angular/router";
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-service',
@@ -16,6 +16,10 @@ export class ServiceComponent implements OnInit {
 
     toServiceView = () => {
         this.router.navigate(['services', this.service._id]);
+    }
+
+    onClickEditButton = () => {
+        this.router.navigate(['services', this.service._id, 'edit']);
     }
 
     ngOnInit() {
