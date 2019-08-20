@@ -9,7 +9,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 })
 export class ServiceViewComponent implements OnInit {
 
-  constructor(private requestsServices: RequestsService, private activatedRouter: ActivatedRoute, private router: Router) { }
+  constructor(private requestsService: RequestsService, private activatedRouter: ActivatedRoute, private router: Router) { }
 
     id = '';
     loading = 'Loading...';
@@ -19,6 +19,7 @@ export class ServiceViewComponent implements OnInit {
         brief: this.loading,
         description: this.loading,
     };
+    deleteClicked = false;
     serviceKeys = [ 'imageUrl', 'brief', 'description'];
 
     toRegularString = (str) => {
@@ -31,9 +32,27 @@ export class ServiceViewComponent implements OnInit {
         this.router.navigate(['services', this.id, 'edit']);
     }
 
+    onClickDeleteButton = () => {
+        this.deleteClicked = true;
+    }
+
+    deleteAction = (confirmState) => {
+        if (confirmState) {
+            this.requestsService.deleteService(this.id)
+                .then(() => {
+                    this.router.navigate(['services']);
+                })
+                .catch((error) => {
+                    alert(`Error: ${error.message}`);
+                });
+        } else {
+            this.deleteClicked = false;
+        }
+    }
+
   ngOnInit() {
       this.id = this.activatedRouter.snapshot.paramMap.get('id');
-      this.requestsServices.getService(this.id).then((service: any) => {
+      this.requestsService.getService(this.id).then((service: any) => {
           this.service = service;
       }).catch((error) => {
           alert(`Error: ${error.message}`);
