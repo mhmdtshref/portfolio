@@ -11,7 +11,6 @@ const send = (req, res) => {
     html: `<h1>Portfolio contact us email</h1><p>From: ${name}</p><p>Email: ${email}</p><p>Subject: ${subject}</p><p>Message: ${message}</p>`,
   }, (error) => {
     if (error) {
-      console.log("ERROR: ", error);
       res.json({ success: false, error: error.message });
     } else {
       res.json({ success: true });

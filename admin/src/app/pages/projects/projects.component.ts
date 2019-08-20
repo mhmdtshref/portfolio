@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import { ListsService } from '../lists.service';
-import { Router } from "@angular/router";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-projects',
@@ -29,7 +29,7 @@ export class ProjectsComponent implements OnInit {
 
     refreshList = () => {
         this.getProjectsList();
-    };
+    }
 
     ngOnInit() {
         this.getProjectsList();

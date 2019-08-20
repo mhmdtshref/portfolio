@@ -19,6 +19,8 @@ const success = (res, data) => {
 };
 
 module.exports = {
-  error: { database: dbError, badRequest: requestError, serverError, authenticationError, },
+  error: {
+    database: dbError, badRequest: requestError, serverError, authenticationError,
+  },
   success,
 };

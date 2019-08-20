@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { RequestsService } from "../../../usable/requests.service";
-import { Router } from "@angular/router";
+import { RequestsService } from '../../../usable/requests.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-project',
@@ -24,7 +24,7 @@ export class CreateProjectComponent implements OnInit {
               this.router.navigate(['projects']);
           }).catch((error) => {
               alert(`Error: ${error.message}`);
-          })
+          });
       } else {
           alert('Fill all fields please!');
       }

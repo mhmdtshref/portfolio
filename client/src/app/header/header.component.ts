@@ -16,7 +16,7 @@ export class HeaderComponent implements OnInit {
 
   getSocials = () => {
     this.http.get('/api/social').subscribe((res: any) => {
-      console.log("RESSS", res);
+      console.log('RESSS', res);
       if (res.success) {
         this.socialsList = res.data;
       } else {
