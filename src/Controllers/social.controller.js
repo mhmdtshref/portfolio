@@ -20,10 +20,9 @@ const store = (req, res) => {
 
 const get = (req, res) => {
   Social.find({}).exec((error, socials) => {
-    if(error){
+    if (error) {
       Response.error.database(res, error);
     } else {
-      console.log('SOCIALS', socials);
       Response.success(res, socials);
     }
   });
