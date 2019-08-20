@@ -1,1 +1,27 @@
-<p>service-edit works!</p>
+<div id="service-edit-page">
+    <div id="page-content">
+        <div id="title-container">
+            <h1>Edit Service: {{name || 'Loading...'}}</h1>
+        </div>
+
+        <div id="form-container">
+            <form (ngSubmit)="saveHandler($event)">
+                <label>
+                    <input [(ngModel)]="service.name" type="text" name="name" placeholder="Service Name.." [attr.disabled]="disabled">
+                </label>
+                <label>
+                    <input [(ngModel)]="service.imageUrl" type="text" name="imageUrl" placeholder="Service image URL.." [attr.disabled]="disabled">
+                </label>
+                <label>
+                    <input [(ngModel)]="service.brief" type="text" name="brief" [attr.disabled]="disabled">
+                </label>
+
+                <label>
+                    <textarea [(ngModel)]="service.description" type="text" name="description" placeholder="Service Description.." [attr.disabled]="disabled"></textarea>
+                </label>
+
+                <button [attr.disabled]="disabled">Save changes</button>
+            </form>
+        </div>
+    </div>
+</div>
