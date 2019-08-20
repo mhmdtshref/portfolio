@@ -9,6 +9,7 @@
   height: 100%;
   background-color: #E77E23;
   cursor: pointer;
+  position: relative;
   .img-container {
     display: flex;
     justify-content: center;
@@ -39,6 +40,41 @@
       text-align: center;
       font-family: $secondary-font-family;
     }
+  }
+
+  .operations-bar {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 30%;
+    height: 15%;
+    padding-right: 35%;
+    padding-left: 35%;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    opacity: 0;
+    transition: .5s ease;
+    .delete-icon {
+      color: red;
+      font-size: $medium-font-size;
+      cursor: pointer;
+    }
+    .edit-icon{
+      color: #0068ff;
+      font-size: $medium-font-size;
+      cursor: pointer;
+    }
+
+  }
+
+  &:hover{
+    .operations-bar{
+      opacity: 1;
+    }
+
   }
 
 }
