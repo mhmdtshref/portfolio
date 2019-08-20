@@ -1,15 +1,19 @@
-<div class="service-box" (click)="toServiceView()">
-    <div class="img-container">
-        <img src="{{service.imageUrl}}">
-    </div>
-    <div class="name-container">
-        <h3>{{service.name}}</h3>
-    </div>
-    <div class="brief-container">
-        <p>{{service.brief}}</p>
+<div class="service-box">
+    <div (click)="toServiceView()">
+        <div class="img-container">
+            <img src="{{service.imageUrl}}">
+        </div>
+        <div class="name-container">
+            <h3>{{service.name}}</h3>
+        </div>
+        <div class="brief-container">
+            <p>{{service.brief}}</p>
+        </div>
     </div>
     <div class="operations-bar">
-        <i class="far fa-trash-alt delete-icon"></i>
+        <i class="far fa-trash-alt delete-icon" (click)="onClickDeleteButton()"></i>
         <i class="far fa-edit edit-icon" (click)="onClickEditButton()"></i>
     </div>
 </div>
+<app-pop-up *ngIf="deleteClicked" title="Confirm Project Delete" message="Are you sure you want to delete the project: {{service.name}}?" greenButton="Keep" redButton="Delete" [action]="deleteAction">
+</app-pop-up>
