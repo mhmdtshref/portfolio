@@ -10,8 +10,10 @@
             </div>
         </div>
         <div id="controls-container">
-            <i class="far fa-trash-alt delete-icon"></i>
+            <i class="far fa-trash-alt delete-icon" (click)="onClickDeleteButton()"></i>
             <i class="far fa-edit edit-icon" (click)="onClickEditButton()"></i>
         </div>
     </div>
 </div>
+<app-pop-up *ngIf="deleteClicked" title="Confirm Project Delete" message="Are you sure you want to delete the project: {{service.name}}?" greenButton="Keep" redButton="Delete" [action]="deleteAction">
+</app-pop-up>
