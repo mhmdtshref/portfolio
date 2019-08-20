@@ -12,7 +12,7 @@ export class NavbarComponent implements OnInit {
 
   routeOnClick = (route) => {
       this.router.navigate([route]);
-  };
+  }
 
   ngOnInit() {
   }
