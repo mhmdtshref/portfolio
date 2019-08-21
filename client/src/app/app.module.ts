@@ -22,6 +22,8 @@ import { ServicesSectionComponent } from './sections/services-section/services-s
 import { LanguagesSectionComponent } from './sections/languages-section/languages-section.component';
 import { TechnologiesSectionComponent } from './sections/technologies-section/technologies-section.component';
 import { FooterComponent } from './footer/footer.component';
+import { SectionsListComponent } from './sections-list/sections-list.component';
+import { SectionIconComponent } from './section-icon/section-icon.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { FooterComponent } from './footer/footer.component';
     ServicesSectionComponent,
     LanguagesSectionComponent,
     TechnologiesSectionComponent,
-    FooterComponent
+    FooterComponent,
+    SectionsListComponent,
+    SectionIconComponent
   ],
   imports: [
     BrowserModule,
