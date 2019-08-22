@@ -1,4 +1,5 @@
 import {Component, HostListener, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-navbar',
@@ -7,7 +8,7 @@ import {Component, HostListener, OnInit} from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   @HostListener('window:scroll', [ '$event' ])
   scrollHandler() {
@@ -29,6 +30,10 @@ export class NavbarComponent implements OnInit {
 
   dropDownButtonClick = () => {
     document.getElementById('dropdownMenu').classList.toggle('show');
+  }
+
+  onLinkClick = (linkTo) => {
+    this.router.navigate([linkTo]);
   }
 
 
