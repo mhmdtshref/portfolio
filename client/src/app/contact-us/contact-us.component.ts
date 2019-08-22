@@ -17,15 +17,13 @@ export class ContactUsComponent implements OnInit {
     message: '',
   };
   showSpinner = false;
-  buttonText = 'Send';
+  showDoneSign = false;
 
   constructor(private http: HttpClient) {
   }
 
   onSubmitHandler(e) {
     e.preventDefault();
-    const spinner = document.getElementById('spinner');
-    spinner.classList.remove('invisible');
     this.showSpinner = true;
     const headers = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' });
 
@@ -39,13 +37,9 @@ export class ContactUsComponent implements OnInit {
       .subscribe((res: any) => {
         if (res.success) {
           this.showSpinner = false;
-          this.buttonText = null;
-          const icon = document.querySelector('button i');
-          icon.classList.remove('invisible');
+          this.showDoneSign = true;
           setTimeout(() => {
-            icon.classList.add('invisible');
-            spinner.classList.add('invisible');
-            this.buttonText = 'Send';
+            this.showDoneSign = false;
           }, 3000);
         } else {
           alert(`Submit error: ${res.error}`);
