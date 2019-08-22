@@ -1,22 +1,24 @@
 <nav id="nav" class="primary-bg">
   <h3 id="navTitle" class="primary-text-color">My Portfolio</h3>
   <ul id="navList">
-    <li class="nav-item"><a href="#Main" class="primary-text-color">Main</a></li>
-    <li class="nav-item"><a href="#Services" class="primary-text-color">Services</a></li>
-    <li class="nav-item"><a href="projects" class="primary-text-color">Projects</a></li>
-    <li class="nav-item"><a href="#Technologies" class="primary-text-color">Technologies</a></li>
-    <li class="nav-item"><a href="#Languages" class="primary-text-color">Languages</a></li>
-    <li class="nav-item"><a href="#ContactUs" class="primary-text-color">Contact Us</a></li>
+    <li class="nav-item primary-text-color" (click)="onLinkClick('')">Main</li>
+    <li class="nav-item primary-text-color">Services</li>
+    <li class="nav-item primary-text-color" (click)="onLinkClick('projects')">Projects</li>
+    <li class="nav-item primary-text-color">Technologies</li>
+    <li class="nav-item primary-text-color">Languages</li>
+    <li class="nav-item primary-text-color">Contact Us</li>
   </ul>
   <div id="navDropdown" class="dropdown">
     <button (click)="dropDownButtonClick()" class="dropbtn"><li class="fa fa-bars"></li></button>
     <div id="dropdownMenu" class="dropdown-content">
-      <a href="#Main">Main</a>
-      <a href="#Services">Services</a>
-      <a href="#Projects">Projects</a>
-      <a href="#Technologies">Technologies</a>
-      <a href="#Languages">Languages</a>
-      <a href="#ContactUs">Contact Us</a>
+      <ul>
+        <li (click)="onLinkClick('')">Main</li>
+        <li (click)="onLinkClick('')">Services</li>
+        <li (click)="onLinkClick('projects')">Projects</li>
+        <li (click)="onLinkClick('')">Technologies</li>
+        <li (click)="onLinkClick('')">Languages</li>
+        <li (click)="onLinkClick('')">Contact Us</li>
+      </ul>
     </div>
   </div>
 </nav>
