@@ -1,0 +1,10 @@
+{
+  "projects": {
+    "brief": "These are the general features of the projects",
+    "features": [
+      "All projects have been uploaded to Github, so you can track projects flow.",
+      "Projects have been created using Agile development method.",
+      "Some projects is made by a team, and each member of teams worked on all parts of the projects."
+    ]
+  }
+}

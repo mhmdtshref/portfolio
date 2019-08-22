@@ -24,6 +24,7 @@ import { TechnologiesSectionComponent } from './sections/technologies-section/te
 import { FooterComponent } from './footer/footer.component';
 import { SectionsListComponent } from './sections-list/sections-list.component';
 import { SectionIconComponent } from './section-icon/section-icon.component';
+import { AboutSectionComponent } from './sections/about-section/about-section.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { SectionIconComponent } from './section-icon/section-icon.component';
     TechnologiesSectionComponent,
     FooterComponent,
     SectionsListComponent,
-    SectionIconComponent
+    SectionIconComponent,
+    AboutSectionComponent
   ],
   imports: [
     BrowserModule,
