@@ -10,6 +10,7 @@ export class ServiceCardComponent implements OnInit {
     @Input() imageUrl: string;
     @Input() name: string;
     @Input() brief: string;
+    @Input() rtl: boolean;
 
   constructor() { }
 
