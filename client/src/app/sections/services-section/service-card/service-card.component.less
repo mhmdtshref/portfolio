@@ -36,3 +36,37 @@
 .rtl-direction {
   direction: rtl;
 }
+
+@media only screen and (max-width: 1000px) {
+  #card{
+    .img-container {
+      width: 45%;
+    }
+    .text-container {
+      width: 49%;
+      p {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  #card{
+    width: 100%;
+    justify-content: center;
+    .img-container {
+      width: 80%;
+    }
+    .text-container {
+      width: 100%;
+      h4{
+        text-align: center;
+      }
+      p {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
