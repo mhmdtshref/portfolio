@@ -1,12 +1,13 @@
 @import "../../../global-variables";
 
 .about-section {
-  min-height: 50vh;
+  min-height: 75%;
+  padding-top:5%;
+  padding-bottom: 5%;
   background-color: @primary-background-color;
 
   .about-section-content {
     margin-left: 10%;
-    padding-top: 3%;
     width: 80%;
 
     h1, p {
@@ -23,6 +24,7 @@
     .brief-paragraph {
       font-size: @medium-font-size;
       font-family: @basic-font;
+      margin-bottom: 2%;
     }
 
     .section-features-container {
@@ -31,9 +33,25 @@
       font-size: @medium-font-size;
       font-family: @basic-font;
       p {
-        margin-top: 1.5%;
+        margin-top: 4%;
       }
     }
+  }
+
+}
+
+@media only screen and (max-width: 650px) {
+
+  .about-section {
+    .about-section-content {
+      .brief-paragraph {
+        font-size: @small-font-size;
+      }
+      .section-features-container {
+        font-size: @small-font-size;
+      }
+    }
+
   }
 
 }
