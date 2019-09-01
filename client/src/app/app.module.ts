@@ -25,6 +25,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SectionsListComponent } from './sections-list/sections-list.component';
 import { SectionIconComponent } from './section-icon/section-icon.component';
 import { AboutSectionComponent } from './sections/about-section/about-section.component';
+import { ProjectDetailsComponent } from './pages/projects/project-details/project-details.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { AboutSectionComponent } from './sections/about-section/about-section.co
     FooterComponent,
     SectionsListComponent,
     SectionIconComponent,
-    AboutSectionComponent
+    AboutSectionComponent,
+    ProjectDetailsComponent
   ],
   imports: [
     BrowserModule,
