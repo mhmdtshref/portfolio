@@ -5,6 +5,7 @@
   background-color: @secondary-background-color;
   #details-content{
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     #img-container{
       width: 30%;
@@ -26,6 +27,43 @@
         margin-bottom: 5%;
         a{
           text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 1000px) {
+  #project-details{
+    padding: 10% 5%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  #project-details{
+    #details-content{
+      justify-content: center;
+      #img-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        img {
+          width: 60%;
+        }
+      }
+      #details-section{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        h2{
+          font-size: @large-font-size;
+        }
+        p {
+          width: 90%;
+          margin-top: 5%;
         }
       }
     }
