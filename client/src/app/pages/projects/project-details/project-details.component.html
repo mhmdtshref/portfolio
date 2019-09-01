@@ -1,0 +1,13 @@
+<div id="project-details">
+  <div id="details-content">
+    <div id="img-container">
+      <img src="{{details.imageUrl}}">
+    </div>
+    <div id="details-section">
+      <h2>{{details.name}}</h2>
+      <p>{{details.description}}</p>
+      <p>Check the <a href="{{details.link}}">Project</a> or GitHub <a href="{{details.gitLink}}">Repo</a></p>
+    </div>
+  </div>
+</div>
+<app-about-section title="Projects" [brief]="data.brief" [features]="data.features"></app-about-section>

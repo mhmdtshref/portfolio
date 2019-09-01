@@ -1,0 +1,71 @@
+@import "../../../../global-variables";
+
+#project-details {
+  padding: 10% 20%;
+  background-color: @secondary-background-color;
+  #details-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    #img-container{
+      width: 30%;
+      img{
+        border: 1px solid @primary-background-color;
+        width: 100%;
+      }
+    }
+    #details-section{
+      margin-left: 3%;
+      width: 50%;
+      h2{
+        font-size: @x-large-font-size;
+        font-family: @titles-font;
+      }
+      p{
+        font-size: @small-font-size;
+        font-family: @basic-font;
+        margin-bottom: 5%;
+        a{
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 1000px) {
+  #project-details{
+    padding: 10% 5%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  #project-details{
+    #details-content{
+      justify-content: center;
+      #img-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        img {
+          width: 60%;
+        }
+      }
+      #details-section{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        h2{
+          font-size: @large-font-size;
+        }
+        p {
+          width: 90%;
+          margin-top: 5%;
+        }
+      }
+    }
+  }
+}
