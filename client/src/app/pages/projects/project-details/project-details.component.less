@@ -1,0 +1,33 @@
+@import "../../../../global-variables";
+
+#project-details {
+  padding: 10% 20%;
+  background-color: @secondary-background-color;
+  #details-content{
+    display: flex;
+    justify-content: flex-start;
+    #img-container{
+      width: 30%;
+      img{
+        border: 1px solid @primary-background-color;
+        width: 100%;
+      }
+    }
+    #details-section{
+      margin-left: 3%;
+      width: 50%;
+      h2{
+        font-size: @x-large-font-size;
+        font-family: @titles-font;
+      }
+      p{
+        font-size: @small-font-size;
+        font-family: @basic-font;
+        margin-bottom: 5%;
+        a{
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
