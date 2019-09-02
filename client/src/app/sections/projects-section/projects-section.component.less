@@ -6,19 +6,22 @@
   background-color: @secondary-background-color;
   display: flex;
   flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  padding-right: 15%;
+  padding-left: 15%;
+  box-sizing: border-box;
   min-height: 40vh;
 
   h2{
     font-family: @titles-font;
-    color: @primary-font-color;
+    color: @secondary-font-color;
     font-size: @title-font-size;
     margin-bottom: 2%;
+    margin-left: 1.5%;
   }
 
   #cards{
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
