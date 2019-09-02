@@ -33,6 +33,7 @@ export class NavbarComponent implements OnInit {
   }
 
   onLinkClick = (linkToArr) => {
+    this.dropDownButtonClick();
     this.router.navigate(linkToArr);
   }
 
