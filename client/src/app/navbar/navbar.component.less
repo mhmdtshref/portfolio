@@ -15,17 +15,21 @@
   transition: background-color 1500ms;
 }
 
-#navTitle {
-  font-family: @titles-font;
-  font-size: 1em;
-  float: left;
+#navTitle-container{
   width: 30%;
+  float: left;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
   box-sizing: border-box;
+  #navTitle {
+    font-family: @titles-font;
+    font-size: 1em;
+    cursor: pointer;
+  }
 }
+
 
 #navList{
   display: flex;
@@ -66,10 +70,14 @@
 }
 
 @media only screen and (max-width: 800px) {
-  #navTitle {
-    font-size: 0.8em;
+  #navTitle-container{
     width: 30%;
+    #navTitle {
+      font-size: 0.8em;
+
+    }
   }
+
 
   .nav-item{
       font-size: 0.8em;
@@ -78,10 +86,13 @@
 }
 
 @media only screen and (max-width: 600px) {
-  #navTitle {
-    font-size: 1em;
+  #navTitle-container{
     width: 50%;
+    #navTitle {
+      font-size: 1em;
+    }
   }
+
   #navList{
     visibility: hidden;
     display: none;
