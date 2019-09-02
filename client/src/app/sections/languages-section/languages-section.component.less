@@ -15,32 +15,37 @@
   #cards{
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     app-language-card {
-      width: 25%;
+      margin: 5% 3%;
+      width: 15%;
     }
   }
 }
 
 
-@media only screen and (max-width: 650px) {
-  #section{
+@media only screen and (max-width: 1000px) {
+  #section {
+    padding: 5% 10%;
+    h2{
+      text-align: center;
+    }
     #cards{
-      justify-content: center;
-      app-language-card {
-        width: 70%;
-        margin-bottom: 5%;
+
+      app-language-card{
+        width: 25%;
       }
     }
   }
 }
 
-@media only screen and (max-width: 450px) {
-  #section{
+@media only screen and (max-width: 650px) {
+  #section {
     #cards{
-      app-language-card {
-        width: 95%;
+      justify-content: center;
+      app-language-card{
+        width: 50%;
       }
     }
   }
