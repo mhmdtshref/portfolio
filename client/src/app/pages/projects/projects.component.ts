@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { projects } from '../../../appData.json';
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ProjectsComponent implements OnInit {
 
   constructor() { }
+
+  projectsData = projects;
 
   ngOnInit() {
   }

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {SectionsService} from '../sections.service';
-import { projects as projectsData } from '../../../appData.json';
 
 @Component({
   selector: 'app-projects-section',
@@ -12,8 +11,6 @@ export class ProjectsSectionComponent implements OnInit {
   constructor(private sectionService: SectionsService) { }
 
   cards = [];
-
-  data = projectsData;
 
   getCards = () => {
       this.sectionService.Request('project')
