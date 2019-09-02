@@ -6,5 +6,10 @@
       "Projects have been created using Agile development method.",
       "Some projects is made by a team, and each member of teams worked on all parts of the projects."
     ]
+  },
+
+  "languages": {
+    "brief": "Programming languages are the language which we can make the computer understand commands. These's a lot of languages in the world, each language have its features and weaknesses, it's depending on what we want to do!",
+    "features": []
   }
 }
