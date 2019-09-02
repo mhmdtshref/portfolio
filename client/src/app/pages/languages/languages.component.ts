@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { languages } from '../../../appData.json';
 
 @Component({
   selector: 'app-languages',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class LanguagesComponent implements OnInit {
 
   constructor() { }
+
+  languagesData = languages;
 
   ngOnInit() {
   }
