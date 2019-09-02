@@ -32,8 +32,9 @@ export class NavbarComponent implements OnInit {
     document.getElementById('dropdownMenu').classList.toggle('show');
   }
 
-  onLinkClick = (linkTo) => {
-    this.router.navigate([linkTo]);
+  onLinkClick = (linkToArr) => {
+    this.dropDownButtonClick();
+    this.router.navigate(linkToArr);
   }
 
 
