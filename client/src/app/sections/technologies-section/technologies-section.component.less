@@ -1,6 +1,6 @@
 @import "../../../global-variables";
 
-#section{
+#section {
   padding-top: 5%;
   padding-bottom: 10%;
   background-color: @secondary-background-color;
@@ -10,20 +10,26 @@
   align-items: center;
   min-height: 40vh;
 
-  h2{
-    font-family: @titles-font;
-    color: @primary-font-color;
-    font-size: @title-font-size;
-    margin-bottom: 2%;
-  }
-
-  #cards{
+  #section-content {
     width: 80%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    app-technology-card {
-      width: 25%;
+
+    h2 {
+      font-family: @titles-font;
+      color: @secondary-font-color;
+      font-size: @title-font-size;
+      margin-bottom: 2%;
+    }
+
+    #cards {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+
+      app-technology-card {
+        width: 20%;
+        margin: 2.5%;
+      }
     }
   }
 }
