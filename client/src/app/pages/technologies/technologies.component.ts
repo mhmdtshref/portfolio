@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { technologies } from '../../../appData.json';
 
 @Component({
   selector: 'app-technologies',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class TechnologiesComponent implements OnInit {
 
   constructor() { }
+
+  technologiesData = technologies;
 
   ngOnInit() {
   }
