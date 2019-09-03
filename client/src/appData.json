@@ -11,5 +11,10 @@
   "languages": {
     "brief": "Programming languages are the language which we can make the computer understand commands. These's a lot of languages in the world, each language have its features and weaknesses, it's depending on what we want to do!",
     "features": []
+  },
+
+  "technologies": {
+    "brief": "Technologies are use the programming language to be able to build apps simply. So we can now implement hard products in simple and fast way using these technologies. There's so many technologies related to database, frontend, backend, testing, mobile and desktop apps we can use any of them as needed.",
+    "features": []
   }
 }
