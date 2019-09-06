@@ -16,5 +16,10 @@
   "technologies": {
     "brief": "Technologies are use the programming language to be able to build apps simply. So we can now implement hard products in simple and fast way using these technologies. There's so many technologies related to database, frontend, backend, testing, mobile and desktop apps we can use any of them as needed.",
     "features": []
+  },
+
+  "socials": {
+    "brief": "These are my social networking accounts. To track my news, you can follow me on socials to know my latest apps and products.",
+    "features": []
   }
 }
