@@ -18,4 +18,13 @@ export class RequestsService {
     });
   })
 
+  getSocials = () => new Promise((resolve, reject) => {
+    this.http.get('/api/social').subscribe((res: any) => {
+      if (res.success) {
+        resolve(res.data);
+      } else {
+        reject(new Error(res.error));
+      }
+    });
+  });
 }

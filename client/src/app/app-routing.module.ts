@@ -5,6 +5,7 @@ import { MainComponent } from './pages/main/main.component';
 import { ProjectDetailsComponent } from './pages/projects/project-details/project-details.component';
 import { LanguagesComponent } from './pages/languages/languages.component';
 import { TechnologiesComponent } from './pages/technologies/technologies.component';
+import {SocialsComponent} from "./pages/socials/socials.component";
 
 const routes: Routes = [
   { path: '', component: MainComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'projects/:id', component: ProjectDetailsComponent },
   { path: 'languages', component: LanguagesComponent },
   { path: 'technologies', component: TechnologiesComponent },
+  { path: 'socials', component: SocialsComponent },
 ];
 
 @NgModule({

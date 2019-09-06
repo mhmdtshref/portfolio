@@ -5,6 +5,6 @@
     <p>{{data.description}}</p>
   </div>
   <div id="socials-container">
-      <app-social *ngFor="let item of socialsList" [imageUrl]="item.iconUrl" [socialLink]="item.link"></app-social>
+      <app-social *ngFor="let item of socialsList | slice:0:4;" [imageUrl]="item.iconUrl" [socialLink]="item.link"></app-social>
   </div>
 </header>
