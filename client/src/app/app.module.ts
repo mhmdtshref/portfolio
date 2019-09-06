@@ -26,6 +26,8 @@ import { SectionsListComponent } from './sections-list/sections-list.component';
 import { SectionIconComponent } from './section-icon/section-icon.component';
 import { AboutSectionComponent } from './sections/about-section/about-section.component';
 import { ProjectDetailsComponent } from './pages/projects/project-details/project-details.component';
+import { SocialsSectionComponent } from './sections/socials-section/socials-section.component';
+import { SocialsComponent } from './pages/socials/socials.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import { ProjectDetailsComponent } from './pages/projects/project-details/projec
     SectionsListComponent,
     SectionIconComponent,
     AboutSectionComponent,
-    ProjectDetailsComponent
+    ProjectDetailsComponent,
+    SocialsSectionComponent,
+    SocialsComponent
   ],
   imports: [
     BrowserModule,
