@@ -1,3 +1,9 @@
-<p>
-  socials-section works!
-</p>
+<div id="section">
+  <div id="content-container">
+    <h1>Social Accounts</h1>
+
+    <div id="cards">
+      <app-social *ngFor="let social of socialsList" [imageUrl]="social.iconUrl" [socialLink]="social.link"></app-social>
+    </div>
+  </div>
+</div>
