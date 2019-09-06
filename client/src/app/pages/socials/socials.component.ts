@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { socials } from '../../../appData.json';
 
 @Component({
   selector: 'app-socials',
@@ -8,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class SocialsComponent implements OnInit {
 
   constructor() { }
+
+  socialsData = socials;
 
   ngOnInit() {
   }
