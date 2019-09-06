@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import userData from '../../data.json';
 import {HttpClient} from '@angular/common/http';
+import {RequestsService} from "../pages/requests.service";
 
 @Component({
   selector: 'app-header',
@@ -12,21 +13,16 @@ export class HeaderComponent implements OnInit {
   data = userData;
   socialsList = [];
 
-  constructor(private http: HttpClient) { }
+  constructor(private requestsService: RequestsService) { }
 
-  getSocials = () => {
-    this.http.get('/api/social').subscribe((res: any) => {
-      console.log('RESSS', res);
-      if (res.success) {
-        this.socialsList = res.data;
-      } else {
-        alert(`Response Error: ${res.error}`);
-      }
-    });
-  }
+
 
   ngOnInit() {
-    this.getSocials();
+    this.requestsService.getSocials().then((socialsData: any) => {
+      this.socialsList = socialsData;
+    }).catch((err) => {
+      alert(`Error: ${err.message}`);
+    });
   }
 
 }
