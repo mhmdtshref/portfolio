@@ -33,7 +33,9 @@ export class NavbarComponent implements OnInit {
   }
 
   onLinkClick = (linkToArr) => {
-    this.dropDownButtonClick();
+    if(linkToArr[0] !== ''){
+      this.dropDownButtonClick();
+    }
     this.router.navigate(linkToArr);
   }
 
