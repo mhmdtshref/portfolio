@@ -9,8 +9,13 @@ export class LanguageCardComponent implements OnInit {
 
   @Input() imageUrl: string;
   @Input() name: string;
+  @Input() link: string;
 
   constructor() { }
+
+  navigateToLink = () => {
+    window.location.href = this.link;
+  }
 
   ngOnInit() {
   }
