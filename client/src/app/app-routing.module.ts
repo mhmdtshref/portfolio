@@ -10,6 +10,7 @@ import {SocialsComponent} from "./pages/socials/socials.component";
 const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'main/:elementId', component: MainComponent },
+  { path: 'main', component: MainComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'projects/:id', component: ProjectDetailsComponent },
   { path: 'languages', component: LanguagesComponent },
