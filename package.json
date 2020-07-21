@@ -41,7 +41,7 @@
     "nodemailer": "^6.2.1"
   },
   "devDependencies": {
-    "codecov": "^3.5.0",
+    "codecov": "^3.7.1",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.17.3",
