@@ -1,9 +1,10 @@
 import './App.scss';
+import { Hero } from './components/hero';
 
 function App() {
   return (
     <div className="app">
-      <p>hello world!</p>
+      <Hero />
     </div>
   );
 }

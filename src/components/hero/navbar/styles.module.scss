@@ -1,0 +1,19 @@
+
+.hero-nav {
+    display: flex;
+    justify-content: flex-start;
+    .nav-list {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        padding-left: 0;
+        .list-item {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 14px;
+            color: #718061;
+            margin: 12px;
+            cursor: pointer;
+        }
+    }
+}
