@@ -2,6 +2,13 @@
 .app {
   margin-right: 180px;
   margin-left: 180px;
+  .circles-section {
+    display: flex;
+    justify-content: space-between;
+    .data-container {
+      width: 48%;
+    }
+  }
 }
 
 * {

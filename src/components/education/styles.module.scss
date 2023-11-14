@@ -1,0 +1,46 @@
+
+.education {
+    .title-container {
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+        }
+    }
+    .education-list-container {
+        display: flex;
+        flex-direction: row;
+        margin-left: 16px;
+        .education-line {
+            width: 2px;
+            background-color: #718061;
+        }
+        .education-list {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            .education-item {
+                margin-top: 40px;
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: row;
+                .education-circle {
+                    width: 24px;
+                    height: 24px;
+                    background-color: #718061;
+                    border-radius: 100%;
+                    margin-left: -12px;
+                    filter: drop-shadow(#718061 0 0 32px);
+                }
+                .education-texts {
+                    margin-left: 24px;
+                    h3 {
+                        margin: 0;
+                    }
+                    p {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,30 @@
+
+.technologies-container {
+    margin-top: 40px;
+    .title-container {
+        h2 {
+            font-size: 48px;
+            font-weight: 600;
+            color: #718061;
+            margin: 0;
+        }
+    }
+    .description-container {
+        p {
+            font-size: 20px;
+        }
+    }
+    .logos-container {
+        display: flex;
+        justify-content: space-between;
+        .item-container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            max-width: 15%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
