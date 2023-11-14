@@ -13,17 +13,17 @@ export const Companies = () => {
             </div>
             <div className={styles['item-container']}>
                 <a>
-                    <img className={styles['personal-image']} src={process.env.PUBLIC_URL + '/assets/images/sum.svg'} alt='sum' />
+                    <img src={process.env.PUBLIC_URL + '/assets/images/sum.svg'} alt='sum' />
                 </a>
             </div>
             <div className={styles['item-container']}>
                 <a>
-                    <img className={styles['personal-image']} src={process.env.PUBLIC_URL + '/assets/images/fabric.svg'} alt='fabric' />
+                    <img src={process.env.PUBLIC_URL + '/assets/images/fabric.svg'} alt='fabric' />
                 </a>
             </div>
             <div className={styles['item-container']}>
                 <a>
-                    <img className={styles['personal-image']} src={process.env.PUBLIC_URL + '/assets/images/tap.svg'} alt='tap' />
+                    <img src={process.env.PUBLIC_URL + '/assets/images/tap.svg'} alt='tap' />
                 </a>
             </div>
         </div>

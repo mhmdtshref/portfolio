@@ -1,0 +1,20 @@
+
+.accounts-and-contacts {
+    display: flex;
+    justify-content: space-between;
+    .list-container {
+        .list-item {
+            display: flex;
+            justify-content: flex-start;
+            .item-text-container {
+                margin-left: 12px;
+                span {
+                    font-size: 32px;
+                }
+            }
+            img {
+                width: 40px;
+            }
+        }
+    }
+}

@@ -2,8 +2,10 @@
 .education {
     .title-container {
         h2 {
-            font-size: 24px;
+            font-size: 48px;
             font-weight: 600;
+            color: #718061;
+            margin: 0;
         }
     }
     .education-list-container {
@@ -12,6 +14,7 @@
         margin-left: 16px;
         .education-line {
             width: 2px;
+            min-width: 2px;
             background-color: #718061;
         }
         .education-list {
@@ -19,6 +22,7 @@
             justify-content: flex-start;
             flex-direction: column;
             .education-item {
+                min-height: 120px;
                 margin-top: 40px;
                 display: flex;
                 justify-content: flex-start;
@@ -26,6 +30,8 @@
                 .education-circle {
                     width: 24px;
                     height: 24px;
+                    min-width: 24px;
+                    min-height: 24px;
                     background-color: #718061;
                     border-radius: 100%;
                     margin-left: -12px;
