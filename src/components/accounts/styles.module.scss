@@ -1,19 +1,33 @@
 
 .accounts-and-contacts {
-    display: flex;
-    justify-content: space-between;
-    .list-container {
-        .list-item {
-            display: flex;
-            justify-content: flex-start;
-            .item-text-container {
-                margin-left: 12px;
-                span {
-                    font-size: 32px;
+    margin-top: 80px;
+    .title-container {
+        h2 {
+            font-size: 48px;
+            font-weight: 600;
+            color: #718061;
+            margin: 0;
+        }    
+    }
+    .content {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 16px;
+        .list-container {
+            .list-item {
+                display: flex;
+                justify-content: flex-start;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                .item-text-container {
+                    margin-left: 12px;
+                    span {
+                        font-size: 32px;
+                    }
                 }
-            }
-            img {
-                width: 40px;
+                img {
+                    width: 40px;
+                }
             }
         }
     }
