@@ -4,9 +4,12 @@
         position: absolute;
         overflow-x: hidden;
         right: 0;
-        top: -70%;
+        top: -55%;
         width: 50%;
         z-index: -1000;
+        @media screen  and (max-width: 768px) {
+            width: 75%;
+        }
     }
     .hero-content-container {
         .navbar-container {
@@ -17,20 +20,55 @@
         .content-container {
             display: flex;
             justify-content: space-between;
+            flex-direction: row;
+            @media screen  and (max-width: 768px) {
+                flex-direction: column-reverse;
+            }
 
             .about-container {
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
+                @media screen  and (max-width: 768px) {
+                    text-align: center;
+                }
                 .about-texts {
                     .hi-text {
                         font-size: 20px;
+                        @media screen  and (max-width: 1200px) {
+                            font-size: 18px;
+                        }
+                        @media screen  and (max-width: 1024px) {
+                            font-size: 16px;
+                        }
+                        @media screen  and (max-width: 900px) {
+                            font-size: 14px;
+                        }
+                        @media screen  and (max-width: 768px) {
+                            font-size: 18px;
+                        }
                     }
                     .name-text {
                         font-weight: bold;
                         font-size: 42px;
                         line-height: 42px;
                         margin: 0 0 8px 0;
+                        @media screen  and (max-width: 1200px) {
+                            font-size: 40px;
+                            line-height: 40px;
+                        }
+                        @media screen  and (max-width: 1024px) {
+                            font-size: 38px;
+                            line-height: 38px;
+                        }
+                        @media screen  and (max-width: 900px) {
+                            font-size: 36px;
+                            line-height: 36px;
+                        }
+                        @media screen  and (max-width: 768px) {
+                            font-size: 40px;
+                            line-height: 40px;
+                        }
                     }
                     .specialty-text {
                         font-weight: bold;
@@ -39,9 +77,37 @@
                         margin: 0 0 8px 0;
                         color: #718061;
                         filter: drop-shadow(#718061 0 0 32px);
+                        @media screen  and (max-width: 1200px) {
+                            font-size: 40px;
+                            line-height: 40px;
+                        }
+                        @media screen  and (max-width: 1024px) {
+                            font-size: 38px;
+                            line-height: 38px;
+                        }
+                        @media screen  and (max-width: 900px) {
+                            font-size: 36px;
+                            line-height: 36px;
+                        }
+                        @media screen  and (max-width: 768px) {
+                            font-size: 40px;
+                            line-height: 40px;
+                        }
                     }
                     .brief-text {
                         font-size: 20px;
+                        @media screen  and (max-width: 1200px) {
+                            font-size: 18px;
+                        }
+                        @media screen  and (max-width: 1024px) {
+                            font-size: 16px;
+                        }
+                        @media screen  and (max-width: 900px) {
+                            font-size: 14px;
+                        }
+                        @media screen  and (max-width: 768px) {
+                            font-size: 18px;
+                        }
                     }
                 }
             }
@@ -49,6 +115,21 @@
             .personal-image {
                 border-radius: 100%;
                 margin-right: -120px;
+                width: 45%;
+                min-width: 45%;
+                height: 100%;
+                @media screen  and (max-width: 1200px) {
+                    margin-right: -120px;
+                }
+                @media screen  and (max-width: 1024px) {
+                    margin-right: -80px;
+                }
+                @media screen  and (max-width: 900px) {
+                    margin-right: -40px;
+                }
+                @media screen  and (max-width: 768px) {
+                    margin: auto;
+                }
             }
         }
     }

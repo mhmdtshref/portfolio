@@ -2,12 +2,32 @@
 .app {
   margin-right: 180px;
   margin-left: 180px;
+  @media screen  and (max-width: 1200px) {
+    margin-right: 120px;
+    margin-left: 120px;
+  }
+  @media screen  and (max-width: 1024px) {
+    margin-right: 80px;
+    margin-left: 80px;
+  }
+  @media screen  and (max-width: 900px) {
+    margin-right: 40px;
+    margin-left: 40px;
+  }
   .circles-section {
     display: flex;
     justify-content: space-between;
+    flex-direction: row;
     margin-top: 120px;
+    @media screen  and (max-width: 768px) {
+      margin-top: 60px;
+      flex-direction: column;
+    }
     .data-container {
       width: 48%;
+      @media screen  and (max-width: 768px) {
+        width: 100%;
+      }
     }
   }
   .my-work-container {
@@ -17,4 +37,10 @@
 
 * {
     font-family: 'Poppins';
+    color: #2E1921;
+}
+
+a {
+  text-decoration: none;
+  color: #2E1921;
 }

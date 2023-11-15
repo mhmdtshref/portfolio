@@ -3,20 +3,49 @@
     margin-top: 120px;
     .title-container {
         h2 {
-            font-size: 48px;
+            font-size: 42px;
+            line-height: 42px;
             font-weight: 600;
             color: #718061;
             margin: 0;
+            @media screen  and (max-width: 1200px) {
+                font-size: 40px;
+                line-height: 40px;
+            }
+            @media screen  and (max-width: 1024px) {
+                font-size: 38px;
+                line-height: 38px;
+            }
+            @media screen  and (max-width: 900px) {
+                font-size: 36px;
+                line-height: 36px;
+            }
+            @media screen  and (max-width: 768px) {
+                font-size: 40px;
+                line-height: 40px;
+            }
         }
     }
     .logos-container {
         display: flex;
         justify-content: space-between;
+        margin-top: 60px;
+        @media screen  and (max-width: 768px) {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
         .item-container {
             display: flex;
             justify-content: center;
             flex-direction: column;
             max-width: 15%;
+            margin-bottom: 24px;
+            @media screen  and (max-width: 768px) {
+                max-width: 24%;
+                width: 24%;
+                margin-right: 8%;
+                margin-left: 8%;
+            }
             img {
                 width: 100%;
             }

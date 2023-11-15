@@ -15,23 +15,23 @@ export const Technologies = () => {
         </div>
         <div className={styles['logos-container']}>
             <div className={styles['item-container']}>
-                <a>
-                    <img src={process.env.PUBLIC_URL + '/assets/images/nodejs.svg'} alt='peronal image' />
+                <a rel='noreferrer' target='_blank' href='https://nodejs.org/en/'>
+                    <img src={process.env.PUBLIC_URL + '/assets/images/nodejs.svg'} alt='nodejs' />
                 </a>
             </div>
             <div className={styles['item-container']}>
-                <a>
-                    <img className={styles['personal-image']} src={process.env.PUBLIC_URL + '/assets/images/reactjs.svg'} alt='peronal image' />
+                <a rel='noreferrer' target='_blank' href='https://react.dev/'>
+                    <img className={styles['personal-image']} src={process.env.PUBLIC_URL + '/assets/images/reactjs.svg'} alt='reactjs' />
                 </a>
             </div>
             <div className={styles['item-container']}>
-                <a>
-                    <img className={styles['personal-image']} src={process.env.PUBLIC_URL + '/assets/images/nextjs.svg'} alt='peronal image' />
+                <a rel='noreferrer' target='_blank' href='https://nextjs.org/'>
+                    <img className={styles['personal-image']} src={process.env.PUBLIC_URL + '/assets/images/nextjs.svg'} alt='nextjs' />
                 </a>
             </div>
             <div className={styles['item-container']}>
-                <a>
-                    <img className={styles['personal-image']} src={process.env.PUBLIC_URL + '/assets/images/aws.svg'} alt='peronal image' />
+                <a rel='noreferrer' target='_blank' href='https://aws.amazon.com/'>
+                    <img className={styles['personal-image']} src={process.env.PUBLIC_URL + '/assets/images/aws.svg'} alt='amazon web services' />
                 </a>
             </div>
         </div>

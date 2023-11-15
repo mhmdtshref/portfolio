@@ -10,6 +10,9 @@ export const MyWork = () => {
             <div className={styles['work-item']}>
                 <div className={`${styles['content-side']} ${styles['margin-right']}`}>
                     <h3>SUM</h3>
+                    <div className={styles['content-project-image']}>
+                        <img className={styles['project-image']} src={process.env.PUBLIC_URL + '/assets/images/sum-project.png'} alt='sum project' />
+                    </div>
                     <p>E-Commerce website collects offers and coupon codes from multiple affiliate networks and shows then in one website.</p>
                     <p>Also, includes creating offers and events manually so users can get more benefits.</p>
                     <img className={styles['company-logo']} src={process.env.PUBLIC_URL + '/assets/images/kiitos.svg'} alt='kiitos' />
@@ -24,6 +27,9 @@ export const MyWork = () => {
                 </div>
                 <div className={`${styles['content-side']} ${styles['margin-left']}`}>
                     <h3>Menuator</h3>
+                    <div className={styles['content-project-image']}>
+                        <img className={styles['project-image']} src={process.env.PUBLIC_URL + '/assets/images/menuator-project.png'} alt='menuator project' />
+                    </div>
                     <p>Provides online-menu services for restaurants. It helps restaurants owners create and manage their online menus that been entered by QR code.</p>
                     <p>It's a private project that I've been working on it for year and a half at my free-time.</p>
                 </div>
@@ -31,6 +37,9 @@ export const MyWork = () => {
             <div className={styles['work-item']}>
                 <div className={`${styles['content-side']} ${styles['margin-right']}`}>
                     <h3>RIS</h3>
+                    <div className={styles['content-project-image']}>
+                        <img className={styles['project-image']} src={process.env.PUBLIC_URL + '/assets/images/ris-project.png'} alt='ris project' />
+                    </div>
                     <p>A private radiology information system to handle patient journey in the center, storing and monitoring his status, and assign him to the correct employees.</p>
                     <p>Also, the system is integrated with radiology machines using DICOM.</p>
                     <img className={styles['company-logo']} src={process.env.PUBLIC_URL + '/assets/images/kiitos.svg'} alt='kiitos' />

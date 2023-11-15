@@ -1,11 +1,30 @@
 
 .experience {
+    margin-bottom: 40px;
     .title-container {
+        margin-bottom: 8px;
         h2 {
-            font-size: 48px;
+            font-size: 42px;
+            line-height: 42px;
             font-weight: 600;
             color: #718061;
             margin: 0;
+            @media screen  and (max-width: 1200px) {
+                font-size: 40px;
+                line-height: 40px;
+            }
+            @media screen  and (max-width: 1024px) {
+                font-size: 38px;
+                line-height: 38px;
+            }
+            @media screen  and (max-width: 900px) {
+                font-size: 36px;
+                line-height: 36px;
+            }
+            @media screen  and (max-width: 768px) {
+                font-size: 40px;
+                line-height: 40px;
+            }
         }
     }
     .experience-list-container {

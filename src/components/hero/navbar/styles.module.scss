@@ -2,6 +2,9 @@
 .hero-nav {
     display: flex;
     justify-content: flex-start;
+    @media screen  and (max-width: 768px) {
+        display: none;
+    }
     .nav-list {
         display: flex;
         justify-content: center;

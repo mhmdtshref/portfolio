@@ -3,17 +3,41 @@
     margin-top: 80px;
     .title-container {
         h2 {
-            font-size: 48px;
+            font-size: 42px;
+            line-height: 42px;
             font-weight: 600;
             color: #718061;
             margin: 0;
+            @media screen  and (max-width: 1200px) {
+                font-size: 40px;
+                line-height: 40px;
+            }
+            @media screen  and (max-width: 1024px) {
+                font-size: 38px;
+                line-height: 38px;
+            }
+            @media screen  and (max-width: 900px) {
+                font-size: 36px;
+                line-height: 36px;
+            }
+            @media screen  and (max-width: 768px) {
+                font-size: 40px;
+                line-height: 40px;
+            }
         }    
     }
     .content {
         display: flex;
         justify-content: space-between;
+        flex-direction: row;
         margin-top: 16px;
+        @media screen  and (max-width: 768px) {
+            flex-direction: column;
+        }
         .list-container {
+            @media screen  and (max-width: 768px) {
+                margin-top: 24px;
+            }
             .list-item {
                 display: flex;
                 justify-content: flex-start;
@@ -22,11 +46,26 @@
                 .item-text-container {
                     margin-left: 12px;
                     span {
-                        font-size: 32px;
+                        font-size: 20px;
+                        @media screen  and (max-width: 1200px) {
+                            font-size: 18px;
+                        }
+                        @media screen  and (max-width: 1024px) {
+                            font-size: 16px;
+                        }
+                        @media screen  and (max-width: 900px) {
+                            font-size: 14px;
+                        }
+                        @media screen  and (max-width: 768px) {
+                            font-size: 18px;
+                        }
                     }
                 }
                 img {
                     width: 40px;
+                    @media screen  and (max-width: 768px) {
+                        width: 28px;
+                    }
                 }
             }
         }
